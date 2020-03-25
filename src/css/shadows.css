@@ -1,0 +1,149 @@
+
+/**
+ * This file holds variables and classes which fast-forwards the design
+ * of components shadows.
+ */
+
+/* §0 As a variable */
+
+:root {
+  /* §1 With colors */
+  --shadowTop0: 0 -4px 8px  -3px #0001;
+  --shadowTop1: 0 -4px 8px  -3px #0002;
+  --shadowTop2: 0 -4px 10px -3px #0003;
+  --shadowTop3: 0 -4px 12px -3px #0004;
+  --shadowTop4: 0 -4px 14px -4px #0005;
+  --shadowTop5: 0 -4px 16px -5px #0006;
+
+  --shadowRight0: 4px 0 8px  -3px #0001;
+  --shadowRight1: 4px 0 8px  -3px #0002;
+  --shadowRight2: 4px 0 10px -3px #0003;
+  --shadowRight3: 4px 0 12px -3px #0004;
+  --shadowRight4: 4px 0 14px -4px #0005;
+  --shadowRight5: 4px 0 16px -5px #0006;
+
+  --shadowBottom0: 0 4px 8px  -3px #0001;
+  --shadowBottom1: 0 4px 8px  -3px #0002;
+  --shadowBottom2: 0 4px 10px -3px #0003;
+  --shadowBottom3: 0 4px 12px -3px #0004;
+  --shadowBottom4: 0 4px 14px -4px #0005;
+  --shadowBottom5: 0 4px 16px -5px #0006;
+
+  --shadowLeft0: 4px 0 8px  -3px #0001;
+  --shadowLeft1: 4px 0 8px  -3px #0002;
+  --shadowLeft2: 4px 0 10px -3px #0003;
+  --shadowLeft3: 4px 0 12px -3px #0004;
+  --shadowLeft4: 4px 0 14px -4px #0005;
+  --shadowLeft5: 4px 0 16px -5px #0006;
+
+  /* §1 Without color */
+  --shadowTop0noColor: 0 -4px 8px  -3px;
+  --shadowTop1noColor: 0 -4px 8px  -3px;
+  --shadowTop2noColor: 0 -4px 10px -3px;
+  --shadowTop3noColor: 0 -4px 12px -3px;
+  --shadowTop4noColor: 0 -4px 14px -4px;
+  --shadowTop5noColor: 0 -4px 16px -5px;
+
+  --shadowRight0noColor: 4px 0 8px  -3px;
+  --shadowRight1noColor: 4px 0 8px  -3px;
+  --shadowRight2noColor: 4px 0 10px -3px;
+  --shadowRight3noColor: 4px 0 12px -3px;
+  --shadowRight4noColor: 4px 0 14px -4px;
+  --shadowRight5noColor: 4px 0 16px -5px;
+
+  --shadowBottom0noColor: 0 4px 8px  -3px;
+  --shadowBottom1noColor: 0 4px 8px  -3px;
+  --shadowBottom2noColor: 0 4px 10px -3px;
+  --shadowBottom3noColor: 0 4px 12px -3px;
+  --shadowBottom4noColor: 0 4px 14px -4px;
+  --shadowBottom5noColor: 0 4px 16px -5px;
+
+  --shadowLeft0noColor: -4px 0 8px  -3px;
+  --shadowLeft1noColor: -4px 0 8px  -3px;
+  --shadowLeft2noColor: -4px 0 10px -3px;
+  --shadowLeft3noColor: -4px 0 12px -3px;
+  --shadowLeft4noColor: -4px 0 14px -4px;
+  --shadowLeft5noColor: -4px 0 16px -5px;
+}
+
+/* §0 As a class */
+
+/* §1 shadowTop */
+.shadowTop0 {
+  box-shadow: var(--shadowTop0);
+}
+.shadowTop1 {
+  box-shadow: var(--shadowTop1);
+}
+.shadowTop2 {
+  box-shadow: var(--shadowTop2);
+}
+.shadowTop3 {
+  box-shadow: var(--shadowTop3);
+}
+.shadowTop4 {
+  box-shadow: var(--shadowTop4);
+}
+.shadowTop5 {
+  box-shadow: var(--shadowTop5);
+}
+
+/* §1 shadowRight */
+.shadowRight0 {
+  box-shadow: var(--shadowRight0);
+}
+.shadowRight1 {
+  box-shadow: var(--shadowRight1);
+}
+.shadowRight2 {
+  box-shadow: var(--shadowRight2);
+}
+.shadowRight3 {
+  box-shadow: var(--shadowRight3);
+}
+.shadowRight4 {
+  box-shadow: var(--shadowRight4);
+}
+.shadowRight5 {
+  box-shadow: var(--shadowRight5);
+}
+
+/* §1 shadowBottom */
+.shadowBottom0 {
+  box-shadow: var(--shadowBottom0);
+}
+.shadowBottom1 {
+  box-shadow: var(--shadowBottom1);
+}
+.shadowBottom2 {
+  box-shadow: var(--shadowBottom2);
+}
+.shadowBottom3 {
+  box-shadow: var(--shadowBottom3);
+}
+.shadowBottom4 {
+  box-shadow: var(--shadowBottom4);
+}
+.shadowBottom5 {
+  box-shadow: var(--shadowBottom5);
+}
+
+/* §1 shadowLeft */
+.shadowLeft0 {
+  box-shadow: var(--shadowLeft0);
+}
+.shadowLeft1 {
+  box-shadow: var(--shadowLeft1);
+}
+.shadowLeft2 {
+  box-shadow: var(--shadowLeft2);
+}
+.shadowLeft3 {
+  box-shadow: var(--shadowLeft3);
+}
+.shadowLeft4 {
+  box-shadow: var(--shadowLeft4);
+}
+.shadowLeft5 {
+  box-shadow: var(--shadowLeft5);
+}
