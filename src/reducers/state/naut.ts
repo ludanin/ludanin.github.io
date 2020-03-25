@@ -1,18 +1,18 @@
-export type NautRoute =
-  "/" |
+export type Stories =
+  "/" | // Not really a story, more of a splash route
   "/home" | "/project_e" | "/marborges" |"/bgado"
 ;
 
-export interface StateNaut {
-  current: NautRoute;
-  nextRoute: NautRoute;
+export interface StateStories {
+  current: Stories;
+  nextStory: Stories;
   sidebar: "visible" | "hidden" | "closing";
   props?: object;
 }
 
-export const initialNaut: StateNaut = {
+export const initialStories: StateStories = {
   current: "/",
-  nextRoute: "/",
+  nextStory: "/",
   sidebar: "hidden",
   props: undefined,
 };

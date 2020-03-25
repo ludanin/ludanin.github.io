@@ -1,9 +1,9 @@
-import { initialNaut, StateNaut } from "reducers/state/naut";
+import { initialStories, StateStories } from "reducers/state/naut";
 import { initialNotifications, StateNotifications } from "reducers/state/notifications";
 
 export interface State {
   version: string;
-  naut: StateNaut;
+  stories: StateStories;
   notifications: StateNotifications;
   orientation: "portrait" | "landscape";
   scrollbar: number;
@@ -11,7 +11,7 @@ export interface State {
 
 export const initialState: State = {
   version: "1.0.0",
-  naut: {...initialNaut},
+  stories: {...initialStories},
   notifications: {...initialNotifications},
   orientation: "portrait",
   scrollbar: 12,

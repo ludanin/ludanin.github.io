@@ -1,5 +1,5 @@
 import { ModelApprisal } from "models/apprisal";
-import { NautRoute } from "reducers/state/naut";
+import { Stories } from "reducers/state/naut";
 import types, { actionType } from "./types";
 
 export * from "./types";
@@ -32,12 +32,12 @@ export interface Actions {
   /**
    * Replaces the current route on top of our stack iwth the given `route`
    */
-  NAUT_REPLACE: (route: NautRoute) => ActionArg;
+  STRY_REPLACE: (route: Stories) => ActionArg;
 
   /**
    * Toggles the sidebar's visibility
    */
-  NAUT_TOGGLE_SIDEBAR: () => ActionArg;
+  STRY_TOGGLE_SIDEBAR: () => ActionArg;
 
   // §1 NOTF
 
@@ -69,13 +69,13 @@ export const SET_SCROLLBAR: Actions["SET_SCROLLBAR"] = (scrollbarWidth) => ({
   type: types.SET_SCROLLBAR, value: scrollbarWidth,
 });
 
-/* §1 Nautilus (NAUT) */
+/* §1 Stories (STRY) */
 
-export const NAUT_REPLACE: Actions["NAUT_REPLACE"] = (route) => ({
-  type: types.NAUT_REPLACE, value: route,
+export const STRY_REPLACE: Actions["STRY_REPLACE"] = (route) => ({
+  type: types.STRY_REPLACE, value: route,
 });
-export const NAUT_TOGGLE_SIDEBAR: Actions["NAUT_TOGGLE_SIDEBAR"] = () => ({
-  type: types.NAUT_TOGGLE_SIDEBAR,
+export const STRY_TOGGLE_SIDEBAR: Actions["STRY_TOGGLE_SIDEBAR"] = () => ({
+  type: types.STRY_TOGGLE_SIDEBAR,
 });
 
 /* §1 Notifications (NOTF) */
