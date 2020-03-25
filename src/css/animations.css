@@ -1,0 +1,221 @@
+/* §0 Scale in/out */
+
+/* §1 scaleOut */
+.scaleOut {
+  animation-name: scaleOut;
+  animation-duration: 350ms;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes scaleOut {/* §2 */
+  0% {
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(0);
+  } 25% {
+    opacity: 1;
+    border-radius: 100%;
+    transform: scale(0);
+  } 50% {
+    border-radius: 100%;
+    transform: scale(0);
+  } 70% {
+    border-radius: 50%;
+  } 100% {
+    border-radius: initial;
+    transform: scale(1);
+  }
+}
+
+/* §1 scaleIn */
+.scaleIn {
+  animation-name: scaleIn;
+  animation-duration: 350ms;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes scaleIn {/* §2 */
+  0% {
+    opacity: 1;
+    border-radius: initial;
+    transform: scale(1);
+  } 25% {
+    opacity: 1;
+    border-radius: initial;
+    transform: scale(1);
+  } 50% {
+    opacity: 1;
+    border-radius: initial;
+    transform: scale(1);
+  } 70% {
+    opacity: 1;
+    border-radius: 50%;
+  } 100% {
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(0);
+  }
+}
+
+/* §0 Fade to existence/nothing */
+
+/* §1 fadeToExistence */
+.fadeToExistence {
+  opacity: 0;
+  animation-name: fadeToExistence;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes fadeToExistence {/* §2 */
+  0% {
+    opacity: 0;
+  } 50% {
+    opacity: 0.7;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+/* §1 fadeToNothing */
+.fadeToNothing {
+  opacity: initial;
+  animation-name: fadeToNothing;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeToNothing {/* §2 */
+  0% {
+    opacity: initial;
+  } 100% {
+    opacity: 0;
+  }
+}
+
+/* §0 Slide from top/right/bottom */
+
+/* §1 slideFromTop */
+.slideFromTop {
+  animation-name: slideFromTop;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromTop {/* §2 */
+  0% {
+    transform: translateY(-100%);
+  } 100% {
+    transform: translateY(initial);
+  }
+}
+
+/* §1 slideFromRight */
+.slideFromRight {
+  animation-name: slideFromRight;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromRight {/* §2 */
+  0% {
+    transform: translateX(100%);
+  } 100% {
+    transform: translateX(initial);
+  }
+}
+
+/* §1 slideFromBottom */
+.slideFromBottom {
+  animation-name: slideFromBottom;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromBottom {/* §2 */
+  0% {
+    transform: translateY(100%);
+  } 100% {
+    transform: translateY(initial);
+  }
+}
+
+/* §1 slideFromLeft */
+.slideFromLeft {
+  animation-name: slideFromLeft;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromLeft {/* §2 */
+  0% {
+    transform: translateX(-100%);
+  } 100% {
+    transform: translateX(initial);
+  }
+}
+
+/* §0 Slide to top/right/bottom */
+
+/* §1 slideToTop */
+.slideToTop {
+  animation-name: slideToTop;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideToTop {
+  0% {
+    transform: translateY(initial);
+  } 100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* §1 slideToRight */
+.slideToRight {
+  animation-name: slideToRight;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(initial);
+  } 100% {
+    transform: translateX(100%);
+  }
+}
+
+/* §1 slideToBottom */
+.slideToBottom {
+  animation-name: slideToBottom;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideToBottom {
+  0% {
+    transform: translateY(initial);
+  } 100% {
+    transform: translateY(100%);
+  }
+}
+
+/* §1 slideToLeft */
+.slideToLeft {
+  animation-name: slideToLeft;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(initial);
+  } 100% {
+    transform: translateX(-100%);
+  }
+}
