@@ -8,7 +8,7 @@ Everything you'd like to inpect is in the `src` folder. `docs` holds the
 compiled production build, and is only uploaded to this repository in order
 to host my portfolion using the GitHub Pages.
 
-### Why there's too much '§' scattered around my comments?
+### Why there are some '§' scattered around my comments?
 
 These are sections.
 
