@@ -3,13 +3,13 @@
   overflow-y: scroll;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 620px) {
   .scrollable::-webkit-scrollbar {
     display: none;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 621px) {
   .scrollable::-webkit-scrollbar {
     height: 10px;
     background: transparent;
