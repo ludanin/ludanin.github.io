@@ -1,0 +1,12 @@
+/* §0 Fonts */
+:root {
+  --slab: "Baloo 2", sans-serif;
+  --mono: "Courier Prime", sans-serif;
+  --sans: "Noto Sans", sans-serif;
+  --serif: "Source Serif Pro", serif;
+  --display: "Playfair Display", serif;
+}
+
+* {
+  font-variant-numeric: lining-nums;
+}
