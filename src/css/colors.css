@@ -1,0 +1,113 @@
+:root {
+  /* §0 Hexadecimal colors */
+
+  /* §1 base */
+  --base00: #FFFFFF;
+  --base05: #F9F7FA;
+  --base10: #EBE7F6;
+  --base20: #D5CCE9;
+  --base30: #9B75DE;
+  --base40: #7A45CF;
+  --base50: #4D27A7;
+  --base60: #2C0D77;
+  --base70: #25135B;
+  --base80: #100237;
+  --base90: #090021;
+
+  /* §1 primary */
+  --primary00: #F9FBFF;
+  --primary05: #F3F5FF;
+  --primary10: #E7EAFE;
+  --primary20: #CDD4FC;
+  --primary30: #9CABF8;
+  --primary40: #7789FF;
+  --primary50: #5469F7;
+  --primary60: #324AF6;
+  --primary70: #2723E1;
+  --primary80: #0404AD;
+  --primary90: #030080;
+
+  /* §1 Accents */
+
+  /* §2 Neg -> Negative */
+  --accNeg00: #FFEBED;
+  --accNeg05: #FFCDD2;
+  --accNeg10: #F5A8A8;
+  --accNeg20: #F08282;
+  --accNeg30: #F35B58;
+  --accNeg40: #F44336;
+  --accNeg50: #F44336;
+  --accNeg60: #EA3430;
+  --accNeg70: #CC2222;
+  --accNeg80: #BC1C1C;
+  --accNeg90: #A10E0E;
+
+  /* §2 Pos -> Positive */
+  --accPos00: #E9F8EB;
+  --accPos05: #C8EDCE;
+  --accPos10: #A1E5AC;
+  --accPos20: #81D58F;
+  --accPos30: #60D173;
+  --accPos40: #35D850;
+  --accPos50: #35D850;
+  --accPos60: #13C430;
+  --accPos70: #1B9A30;
+  --accPos80: #0F8122;
+  --accPos90: #017113;
+
+  /* §0 RGBA colors */
+
+  /* §1 base */
+  --base00a: 255, 255, 255;
+  --base05a: 249, 247, 250;
+  --base10a: 235, 231, 246;
+  --base20a: 213, 204, 233;
+  --base30a: 155, 117, 222;
+  --base40a: 122, 069, 207;
+  --base50a: 077, 039, 167;
+  --base60a: 044, 013, 119;
+  --base70a: 037, 019, 091;
+  --base80a: 016, 002, 055;
+  --base90a: 009, 000, 033;
+
+  /* §1 primary */
+  --primary00a: 249, 251, 255;
+  --primary05a: 243, 245, 255;
+  --primary10a: 231, 234, 254;
+  --primary20a: 205, 212, 252;
+  --primary30a: 156, 171, 248;
+  --primary40a: 119, 137, 255;
+  --primary50a: 084, 105, 247;
+  --primary60a: 050, 074, 246;
+  --primary70a: 039, 035, 225;
+  --primary80a: 004, 004, 173;
+  --primary90a: 003, 000, 128;
+
+  /* §1 Accents */
+
+  /* §2 Neg -> Negative */
+  --accNeg00a: 255, 235, 237;
+  --accNeg05a: 255, 205, 210;
+  --accNeg10a: 245, 168, 168;
+  --accNeg20a: 240, 130, 130;
+  --accNeg30a: 243, 091, 088;
+  --accNeg40a: 244, 067, 054;
+  --accNeg50a: 244, 067, 054;
+  --accNeg60a: 234, 052, 048;
+  --accNeg70a: 204, 034, 034;
+  --accNeg80a: 188, 028, 028;
+  --accNeg90a: 161, 014, 014;
+
+  /* §2 Pos -> Positive */
+  --accPos00a: 233, 248, 235;
+  --accPos05a: 200, 237, 206;
+  --accPos10a: 161, 229, 172;
+  --accPos20a: 129, 213, 143;
+  --accPos30a: 096, 209, 115;
+  --accPos40a: 053, 216, 080;
+  --accPos50a: 053, 216, 080;
+  --accPos60a: 019, 196, 048;
+  --accPos70a: 027, 154, 048;
+  --accPos80a: 015, 129, 034;
+  --accPos90a: 001, 113, 019;
+}
