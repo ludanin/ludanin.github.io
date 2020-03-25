@@ -1,0 +1,31 @@
+html {
+  color: var(--base90);
+  font-family: var(--sans);
+  overflow: hidden;
+
+  margin: 0; padding: 0;
+  background-color: var(--primary00);
+}
+
+/* Ensures consistent box-sizing across elements */
+html, *, :before, :after {
+  box-sizing: border-box;
+}
+
+body, #root {
+  overflow: hidden;
+  margin: 0; padding: 0;
+}
+
+/* §1 variables */
+:root {
+  --radius: 0.72vw;
+  --scrollbar: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --radius: 2.72vw;
+    --scrollbar: 0px;
+  }
+}
