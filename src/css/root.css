@@ -4,7 +4,7 @@ html {
   overflow: hidden;
 
   margin: 0; padding: 0;
-  background-color: var(--primary00);
+  background-color: var(--base00);
 }
 
 /* Ensures consistent box-sizing across elements */
