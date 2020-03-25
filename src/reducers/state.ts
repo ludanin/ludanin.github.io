@@ -1,5 +1,5 @@
-import { initialStories, StateStories } from "reducers/state/naut";
 import { initialNotifications, StateNotifications } from "reducers/state/notifications";
+import { initialStories, StateStories } from "reducers/state/stories";
 
 export interface State {
   version: string;

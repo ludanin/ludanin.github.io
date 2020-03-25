@@ -1,5 +1,5 @@
 import { ModelApprisal } from "models/apprisal";
-import { Stories } from "reducers/state/naut";
+import { Stories } from "reducers/state/stories";
 import types, { actionType } from "./types";
 
 export * from "./types";
