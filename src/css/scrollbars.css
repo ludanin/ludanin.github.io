@@ -1,0 +1,34 @@
+.scrollable {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  .scrollable::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .scrollable::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+    width: var(--scrollbar);
+  }
+
+  .scrollable::-webkit-scrollbar-thumb {
+    background: var(--base40);
+    border: 6px solid var(--base00);
+    border-radius: 0.72vw;
+    border-bottom: 3px solid var(--base00);
+    border-top: 3px solid var(--base00);
+  }
+
+  .scrollable::-webkit-scrollbar-thumb:hover {
+    background: var(--base50);
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    border-radius: 0.72vw;
+  }
+}
