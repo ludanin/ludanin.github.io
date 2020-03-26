@@ -4,7 +4,7 @@ import { initialStories, StateStories } from "reducers/state/stories";
 export interface State {
   version: string;
   stories: StateStories;
-  language: "pt" | "en" | "changing";
+  language: "pt" | "en" | "pt>en" | "en>pt";
   notifications: StateNotifications;
   orientation: "portrait" | "landscape";
   scrollbar: number;
