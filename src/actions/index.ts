@@ -27,6 +27,11 @@ export interface Actions {
    */
   SET_SCROLLBAR: (scrollbarWidth: number) => ActionArg;
 
+  /**
+   * Changes the language of the website
+   */
+  LNG_CHANGE: () => ActionArg;
+
   // §1 NAUT
 
   /**
@@ -67,6 +72,9 @@ export const SET_ORIENTATION: Actions["SET_ORIENTATION"] = (orientation) => ({
 });
 export const SET_SCROLLBAR: Actions["SET_SCROLLBAR"] = (scrollbarWidth) => ({
   type: types.SET_SCROLLBAR, value: scrollbarWidth,
+});
+export const LNG_CHANGE: Actions["LNG_CHANGE"] = () => ({
+  type: types.LNG_CHANGE,
 });
 
 /* §1 Stories (STRY) */
