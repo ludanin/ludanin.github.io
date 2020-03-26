@@ -67,16 +67,25 @@ export default function(
     case types.STRY_REPLACE: {
       const { current, nextStory } = state.stories;
 
-      // Without a payload, this action is surely triggered by an user
-      // and as such it is indicating the beginning of a route/tab change,
-      // to ensure a transition happens we're going only to change the
-      // nextRoute here.
+      // We don't want any long transition to occur at the splash route
+      // ("/")
       if (current !== "/") {
         if (current !== nextStory) {
           if (action.payload === undefined) {
+            // We should do nothing here, as the user is trying to change
+            // a story while a transition is in process
             return state;
+          } else {
+            // Proceed to the final return found in this switch-case
           }
         } else if (action.payload === undefined) {
+          // Without a payload, this action is surely triggered by an user (
+          // since the action dispatched by STRY_REPLACE does not takes any
+          // payload when fired by human interaction, unlike what happens
+          // through our sagas).
+          //
+          // Due to this we'll ensure that a transition happens by changing only
+          // the nextStory
           return {
             ...state,
             stories: {
