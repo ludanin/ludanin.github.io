@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import * as actions from "actions";
-import LocaleText from "components/LocaleText/locale_text";
+import LocaleText from "components/locale_text/locale_text";
 import { RPropsComplete } from "reducers";
 
 import styles from "./spin.module.css";
