@@ -8,6 +8,12 @@ Everything you'd like to inpect is in the `src` folder. `docs` holds the
 compiled production build, and is only uploaded to this repository in order
 to host my portfolion using the GitHub Pages.
 
+Since sometimes I work on multiple environments (Windows & Linux) you'll
+probably note that I name all the files in this repository as lower_snake_case.extension
+
+I do this in order to avoid possible conflicts between the two OSes, as Windows
+cannot differ between lower & upper cases in file names.
+
 ### Why there are some '§' scattered around my comments?
 
 These are sections.
