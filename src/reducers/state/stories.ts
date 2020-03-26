@@ -7,12 +7,10 @@ export interface StateStories {
   current: Stories;
   nextStory: Stories;
   sidebar: "visible" | "hidden" | "closing";
-  props?: object;
 }
 
 export const initialStories: StateStories = {
   current: "/",
   nextStory: "/",
   sidebar: "hidden",
-  props: undefined,
 };
