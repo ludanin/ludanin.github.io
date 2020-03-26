@@ -1,0 +1,17 @@
+.localized.animated.transition {
+  animation-name: translating;
+  /* Remember to check the delay set at sagas/index.ts */
+  animation-duration: 400ms;
+
+  animation-direction: forwards;
+  animation-play-state: running;
+  animation-timing-function: ease;
+}
+
+@keyframes translating {
+  0% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}
