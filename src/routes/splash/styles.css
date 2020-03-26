@@ -1,0 +1,12 @@
+.SPLASH {
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: var(--base00);
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

@@ -1,0 +1,41 @@
+.centerSpin {
+  width: 60vw;
+  height: 45vh;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+} @media screen and (max-width: 620px) {
+  .center { width: 90vw; height: 60vh }
+}
+
+/* §1 icon */
+.icon i::before {
+  font-size: 4vw;
+  color: var(--primary40);
+  animation-duration: 937ms;
+  text-shadow: 0 0 8px var(--primary20);
+} @media screen and (max-width: 620px) {
+  .icon i::before {
+    font-size: 18vw;
+  }
+}
+
+.description {
+  color: var(--primary50);
+  text-align: center;
+  font-family: var(--raleway);
+  font-weight: bold;
+  font-size: 1.04rem;
+
+  animation: blink ease 3000ms infinite;
+}
+
+@keyframes blink {
+  000% { opacity: 0.6; }
+  050% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
