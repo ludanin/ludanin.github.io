@@ -4,7 +4,12 @@ html {
   overflow: hidden;
 
   margin: 0; padding: 0;
-  background-color: var(--base00);
+  background-color: var(--base90);
+}
+@media screen and (min-width: 621px) {
+  html {
+    background-color: var(--base00);
+  }
 }
 
 /* Ensures consistent box-sizing across elements */
@@ -21,6 +26,7 @@ body, #root {
 :root {
   --radius: 0.72vw;
   --scrollbar: 12px;
+  touch-action: pan-x pan-y;
 }
 
 @media screen and (max-width: 620px) {
