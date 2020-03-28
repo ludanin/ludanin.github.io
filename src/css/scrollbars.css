@@ -19,7 +19,7 @@
   .scrollable::-webkit-scrollbar-thumb {
     background: var(--base40);
     border: 6px solid var(--base00);
-    border-radius: 0.72vw;
+    border-radius: var(--radius);
     border-bottom: 3px solid var(--base00);
     border-top: 3px solid var(--base00);
   }
@@ -29,6 +29,6 @@
   }
 
   .scrollable::-webkit-scrollbar-track {
-    border-radius: 0.72vw;
+    border-radius: var(--radius);
   }
 }
