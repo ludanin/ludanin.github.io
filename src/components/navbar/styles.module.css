@@ -27,7 +27,6 @@
   padding: 0 2.5vw;
 
   display: flex;
-  box-shadow: var(--shadowTop5);
   animation: slideFromBottom ease 322ms;
 } @media screen and (min-width: 621px) {
   :global(.NAVBAR) :global {
@@ -39,7 +38,6 @@
     flex-direction: column-reverse;
     padding: 2vh 0;
 
-    box-shadow: none;
     animation: slideFromLeft ease 322ms;
   }
 }
