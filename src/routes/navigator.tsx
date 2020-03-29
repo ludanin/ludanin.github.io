@@ -3,24 +3,28 @@ import { connect, useSelector } from "react-redux";
 
 import { RPropsRedux } from "reducers";
 import { Stories } from "reducers/state/stories";
-import Splash from "routes/splash/route";
+import HomeRoute from "routes/home/route";
+import SplashRoute from "routes/splash/route";
+
+import "./navigator.css";
 
 const Navigator: React.FC<RPropsRedux> = () => {
   const { current, nextStory } = useSelector((s: RPropsRedux) => s.Redux.stories);
 
   const renderRoute = (story: Stories) => {
     switch (story) {
-      case "/home": return <div/>;
+      case "/home": return <HomeRoute/>;
 
       case "/":
-      default: return <Splash/>;
+      default: return <SplashRoute/>;
     }
   };
 
-  const inTransition = current !== nextStory;
+  const transition = current !== nextStory ? "transition" : "";
+  const expanded = current === "/" ? "expanded" : "";
 
   return (
-    <div className={`NAVIGATOR ${inTransition ? "transition" : ""}`}>
+    <div className={`NAVIGATOR ${transition} ${expanded}`}>
       {renderRoute(current)}
     </div>
   );
