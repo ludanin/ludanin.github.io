@@ -1,0 +1,218 @@
+:root {
+  --PAGERwidth: calc(var(--NAVBARwidth) - 5vw - var(--NAVBARiconWrapper) - var(--NAVBARiconWrapper));
+  --PAGERheight: var(--NAVBARheight);
+  --PAGERstoryChooserButtonHeight: calc(var(--PAGERheight) * 0.9);
+  --PAGERanimationCurve: cubic-bezier(0, 1.63, 1, 1.01);
+} @media screen and (min-width: 621px) {
+  :root {
+    --PAGERwidth: 40vw;
+    --PAGERheight: 3vw;
+    --PAGERstoryChooserButtonHeight: calc(var(--PAGERheight) * 1.03);
+  }
+}
+
+/* §0 Main wrapper */
+
+.wrapper {
+  width: var(--PAGERwidth);
+  height: var(--PAGERheight);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} @media screen and (min-width: 621px) {
+  .wrapper :global {
+    background-color: var(--base90);
+    border-radius: var(--radius);
+
+    position: fixed;
+    bottom: 3vh;
+    right: calc(calc(var(--CONTENTwidth) - var(--PAGERwidth)) / 2);
+
+    box-shadow: var(--shadowBottom3);
+
+    animation: slideFromBottom ease 300ms;
+
+    display: flex;
+  }
+}
+
+.onlyLandscape {
+  width: var(--CONTENTwidth);
+  height: calc(var(--PAGERheight) + 4vh);
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  pointer-events: visiblePainted;
+  z-index: 3;
+}
+
+/* §0 Previous/Next buttons */
+.prevNext {
+  width: calc(var(--NAVBARiconWrapper) * 0.9);
+  height: calc(var(--NAVBARiconWrapper) * 0.9);
+
+  border: none;
+  background: none;
+
+  color: var(--base20);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* §2 Mouse effects (disabled, hover, active, etc) */
+.prevNext:disabled {
+  color: var(--base60);
+}
+
+.prevNext:focus {
+  outline: none;
+  text-shadow: 0 0 8px var(--base00);
+}
+
+.prevNext > i::before {
+  transition: font-size var(--PAGERanimationCurve) 200ms;
+  font-size: calc(var(--NAVBARiconWrapper) * 0.5);
+}
+
+.prevNext:enabled:active > i::before {
+  font-size: calc(var(--NAVBARiconWrapper) * 0.75);
+}
+
+/* §0 page counter */
+
+/* §1 Main wrapper */
+.pageCounter {
+  width: calc(var(--PAGERwidth) * 0.4);
+  height: var(--PAGERheight);
+
+  background: none;
+  background-color: none;
+  border: none;
+
+  color: var(--base00);
+  font-family: var(--slab);
+  font-size: calc(var(--PAGERwidth) * 0.08);
+
+  position: relative;
+} @media screen and (min-width: 621px) {
+  .pageCounter {
+    width: calc(var(--PAGERwidth) * 0.2);
+    font-size: calc(var(--Pagerwidth) * 0.07);
+  }
+}
+
+/* §1 Stack icon and pages together */
+.pageCounter > span,
+.pageCounter > i {
+  width: 100%;
+  height: var(--PAGERheight);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* §1 Icon changes */
+
+.pageCounter > i {
+  padding-bottom: calc(var(--PAGERheight) * 0.08);
+}
+.pageCounter > i::before {
+  color: rgba(var(--base00a), 0.4);
+  font-size: calc(var(--PAGERheight) * 0.9);
+  transition: color ease 322ms;
+}
+.pageCounter:hover > i::before {
+  color: rgba(var(--primary20a), 0.7);
+  text-shadow: 0 0 3px rgba(var(--primary30a), 0.6);
+}
+
+/* §0 storyChooser */
+.storyChooser :global {
+  width: var(--PAGERwidth);
+  height: calc(var(--PAGERstoryChooserButtonHeight) * 3);
+
+  border: 1px solid var(--base50);
+  backdrop-filter: blur(15px) invert(1) hue-rotate(180deg);
+  border-radius: var(--radius);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(var(--base00a), 0.51),
+    rgba(var(--base00a), 0.58)
+  );
+
+  position: absolute;
+  right: calc(var(--PAGERwidth) * -0.3);
+  bottom: calc(var(--PAGERheight) * 1.2);
+
+  display: none;
+  flex-direction: column;
+
+  overflow: hidden;
+  animation: slideFromBottom var(--PAGERanimationCurve) 250ms;
+
+  z-index: -1;
+} @media screen and (min-width: 621px) {
+  .storyChooser {
+    width: 180%;
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(var(--base00a), 0.55),
+      rgba(var(--base00a), 0.6)
+    );
+    right: calc(var(--PAGERwidth) * -0.081);
+    border-width: 0.5px;
+  }
+}
+
+:global(.active) > .storyChooser {
+  display: flex;
+}
+
+:global(.hiding) > .storyChooser :global {
+  display: flex;
+  animation: slideToBottom var(--PAGERanimationCurve) 150ms, fadeToNothing ease 150ms;
+  animation-fill-mode: forwards;
+}
+
+/* §1 Button */
+.storyChooser > button {
+  width: 100%;
+  height: var(--PAGERstoryChooserButtonHeight);
+
+  background: none;
+  background-color: rgba(var(--base00a), 0.0);
+  border: none;
+  border-bottom: 1px solid var(--base50);
+
+  color: var(--base00);
+  font-family: var(--slab);
+  font-size: calc(var(--PAGERstoryChooserButtonHeight) * 0.3);
+
+  transition: background-color ease 100ms;
+} .storyChooser > button:nth-last-child(1) { border-bottom: none; }
+
+@media screen and (min-width: 621px) {
+  .storyChooser > button {
+    font-size: calc(var(--PAGERstoryChooserButtonHeight) * 0.35);
+  }
+}
+
+.storyChooser > button:focus,
+.storyChooser > button:hover {
+  background-color: rgba(var(--base00a), 0.2);
+  outline: none;
+}
+.storyChooser > button:active {
+  background-color: rgba(var(--base90a), 0.4);
+  transition: none;
+}
