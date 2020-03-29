@@ -17,7 +17,7 @@
   }
 
   .scrollable::-webkit-scrollbar-thumb {
-    background: var(--base40);
+    background: var(--primary20);
     border: 6px solid var(--base00);
     border-radius: var(--radius);
     border-bottom: 3px solid var(--base00);
@@ -25,7 +25,7 @@
   }
 
   .scrollable::-webkit-scrollbar-thumb:hover {
-    background: var(--base50);
+    background: var(--primary30);
   }
 
   .scrollable::-webkit-scrollbar-track {
