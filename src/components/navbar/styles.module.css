@@ -1,0 +1,188 @@
+:root {
+  --NAVBARwidth: 100vw;
+  --NAVBARheight: 15vw;
+
+  --NAVBARiconWrapper: 15vw;
+  --NAVBARiconCircle: 11vw;
+} @media screen and (min-width: 621px) {
+  :root {
+    --NAVBARwidth: 4vw;
+    --NAVBARheight: 100vh;
+
+    --NAVBARiconWrapper: 4vw;
+    --NAVBARiconCircle: 3vw;
+  }
+}
+
+:global(.NAVBAR) :global {
+  width: var(--NAVBARwidth);
+  height: var(--NAVBARheight);
+
+  background-color: var(--base90a);
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  padding: 0 2.5vw;
+
+  display: flex;
+  box-shadow: var(--shadowTop5);
+  animation: slideFromBottom ease 322ms;
+} @media screen and (min-width: 621px) {
+  :global(.NAVBAR) :global {
+    top: 0;
+    bottom: unset;
+
+    background-color: var(--base00);
+
+    flex-direction: column-reverse;
+    padding: 2vh 0;
+
+    box-shadow: none;
+    animation: slideFromLeft ease 322ms;
+  }
+}
+
+/* §0 Language */
+
+/* §1 Main wrapper */
+.language {
+  width: var(--NAVBARiconWrapper);
+  height: var(--NAVBARiconWrapper);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* §1 Circle */
+.languageCircle {
+  width: var(--NAVBARiconCircle);
+  height: var(--NAVBARiconCircle);
+  border-radius: 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--base00);
+  transition: background-color ease 322ms;
+} @media screen and (min-width: 621px) {
+  .languageCircle { background-color: var(--base90); }
+  .languageCircle:hover { background-color: var(--primary50); }
+}
+
+/* §1 Flag */
+.languageFlag {
+  width: calc(var(--NAVBARiconCircle) * 0.86);
+  height: calc(var(--NAVBARiconCircle) * 0.86);
+}
+.languageFlag > img {
+  border-radius: calc(var(--NAVBARiconCircle) / 2);
+}
+
+@media screen and (min-width: 621px) {
+  .languageCircle {
+    width: calc(var(--NAVBARiconCircle) * 0.8);
+    height: calc(var(--NAVBARiconCircle) * 0.8);
+    border-radius: calc(var(--NAVBARiconCircle) * 0.8 * 0.1);
+    opacity: 0.5;
+    transition: background-color ease 322ms, opacity ease 322ms;
+  }
+  .languageCircle:hover {
+    opacity: 0.9;
+    background-color: var(--base90);
+  }
+  .languageFlag {
+    width: calc(var(--NAVBARiconCircle) * 0.7);
+    height: calc(var(--NAVBARiconCircle) * 0.7);
+  }
+  .languageFlag > img {
+    width: calc(var(--NAVBARiconCircle) * 0.7);
+    height: calc(var(--NAVBARiconCircle) * 0.7);
+    border-radius: calc(var(--NAVBARiconCircle) * 0.7 * 0.1);
+  }
+}
+
+
+/* §0 Story chooser/pager */
+
+/* §1 Main wrapper */
+.pager {
+  width: calc(var(--NAVBARwidth) - 5vw - var(--NAVBARiconWrapper) - var(--NAVBARiconWrapper));
+  height: 100%;
+} @media screen and (min-width: 621px) {
+  .pager {
+    width: var(--NAVBARwidth);
+    height: calc(var(--NAVBARheight) - 4vh - var(--NAVBARiconWrapper) - var(--NAVBARiconWrapper));
+
+    align-self: flex-end;
+  }
+}
+
+/* §1 wrapped text */
+.wrappedText {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--mono);
+  font-size: calc(var(--NAVBARwidth) * 0.35);
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+/* §1 Page count */
+
+/* §0 Sidebar Toggle */
+
+/* §1 Main wrapper */
+.sidebar {
+  width: var(--NAVBARiconWrapper);
+  height: var(--NAVBARiconWrapper);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* §1 Button */
+.sidebarButton {
+  width: var(--NAVBARiconCircle);
+  height: var(--NAVBARiconCircle);
+
+  border: none;
+
+  color: var(--base00);
+  background: none;
+
+  transition: background-color ease 322ms, color ease 322ms;
+}
+
+/* §2 Focus/Active/Hover */
+
+@media screen and (max-width: 620px) {
+  .sidebarButton:focus {
+    text-shadow: 0 0 8px rgba(var(--primary50a), 0.5);
+    outline: none;
+  }
+}
+@media screen and (min-width: 621px) {
+  .sidebarButton { color: var(--base90); }
+  .sidebarButton:focus { outline-color: var(--base30); }
+  .sidebarButton:hover { background-color: var(--base10); }
+  .sidebarButton:active {
+    background-color: var(--base90);
+    color: var(--base00);
+    transition: none;
+  }
+}
+
+/* §2 Button Icon */
+.sidebarButton > i::before {
+  font-size: calc(var(--NAVBARiconCircle) / 1.5);
+}
