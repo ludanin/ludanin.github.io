@@ -35,3 +35,7 @@ body, #root {
     --scrollbar: 0px;
   }
 }
+
+/* §1 Z Indexes */
+.NAVIGATOR { z-index: 1; }
+.NAVBAR { z-index: 3; }
