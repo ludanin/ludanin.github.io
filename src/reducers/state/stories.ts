@@ -7,10 +7,14 @@ export interface StateStories {
   current: Stories;
   nextStory: Stories;
   sidebar: "visible" | "hidden" | "closing";
+  page: number;
+  maxPage: number;
 }
 
 export const initialStories: StateStories = {
   current: "/",
   nextStory: "/",
   sidebar: "hidden",
+  page: 1,
+  maxPage: 1,
 };
