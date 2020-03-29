@@ -3,6 +3,8 @@ import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 
+import Navbar from "components/navbar/navbar";
+import Pager from "components/pager/pager";
 import reducers from "reducers";
 import Navigator from "routes/navigator";
 import sagas from "sagas";
@@ -22,6 +24,8 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <Navigator/>
+      <Pager onlyLandscape={true}/>
+      <Navbar/>
     </Provider>
   );
 };
