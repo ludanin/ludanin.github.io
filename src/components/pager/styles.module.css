@@ -142,13 +142,15 @@
   height: calc(var(--PAGERstoryChooserButtonHeight) * 3);
 
   border: 1px solid var(--base50);
-  backdrop-filter: blur(15px) invert(1) hue-rotate(180deg);
+  backdrop-filter: blur(7px);
   border-radius: var(--radius);
   background-image: linear-gradient(
     to bottom right,
-    rgba(var(--base00a), 0.51),
-    rgba(var(--base00a), 0.58)
+    rgba(var(--base60a), 0.51),
+    rgba(var(--base70a), 0.58)
   );
+  box-shadow: 3px 3px 4px #0004;
+  animation: slideFromBottom var(--PAGERanimationCurve) 250ms;
 
   position: absolute;
   right: calc(var(--PAGERwidth) * -0.3);
@@ -157,18 +159,11 @@
   display: none;
   flex-direction: column;
 
-  overflow: hidden;
-  animation: slideFromBottom var(--PAGERanimationCurve) 250ms;
-
   z-index: -1;
+  overflow: hidden;
 } @media screen and (min-width: 621px) {
   .storyChooser {
     width: 180%;
-    background-image: linear-gradient(
-      to bottom right,
-      rgba(var(--base00a), 0.55),
-      rgba(var(--base00a), 0.6)
-    );
     right: calc(var(--PAGERwidth) * -0.081);
     border-width: 0.5px;
   }
