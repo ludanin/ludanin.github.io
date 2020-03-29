@@ -3,7 +3,7 @@ import { connect, useSelector } from "react-redux";
 
 import { RPropsRedux } from "reducers";
 import { Stories } from "reducers/state/stories";
-import HomeRoute from "routes/home/route";
+import HomeRoute from "routes/home/story";
 import SplashRoute from "routes/splash/route";
 
 import "./navigator.css";
