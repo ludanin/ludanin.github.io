@@ -27,7 +27,7 @@
 
     position: fixed;
     bottom: 3vh;
-    right: calc(calc(var(--CONTENTwidth) - var(--PAGERwidth)) / 2);
+    right: calc(calc(var(--NAVIGATORwidth) - var(--PAGERwidth)) / 1.8);
 
     box-shadow: var(--shadowBottom3);
 
@@ -38,7 +38,7 @@
 }
 
 .onlyLandscape {
-  width: var(--CONTENTwidth);
+  width: var(--NAVIGATORwidth);
   height: calc(var(--PAGERheight) + 4vh);
 
   position: fixed;
