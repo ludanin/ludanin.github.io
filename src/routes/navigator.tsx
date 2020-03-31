@@ -1,9 +1,9 @@
 import React from "react";
-import { connect, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { RPropsRedux } from "reducers";
 import { Stories } from "reducers/state/stories";
-import HomeRoute from "routes/home/story";
+import HomeStory from "routes/home/story";
 import SplashRoute from "routes/splash/route";
 
 import "./navigator.css";
@@ -13,7 +13,7 @@ const Navigator: React.FC<RPropsRedux> = () => {
 
   const renderRoute = (story: Stories) => {
     switch (story) {
-      case "/home": return <HomeRoute/>;
+      case "/home": return <HomeStory/>;
 
       case "/":
       default: return <SplashRoute/>;
@@ -30,8 +30,4 @@ const Navigator: React.FC<RPropsRedux> = () => {
   );
 };
 
-const mapStateToProps = (state: any) => ({
-  Redux: state.Redux,
-});
-
-export default connect(mapStateToProps)(Navigator);
+export default Navigator;
