@@ -15,3 +15,11 @@
     opacity: 0;
   }
 }
+
+.localized.animated * {
+  animation: inherit;
+  animation-duration: inherit;
+  animation-direction: inherit;
+  animation-play-state: inherit;
+  animation-timing-function: inherit;
+}
