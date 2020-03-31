@@ -27,7 +27,12 @@ const LocaleText: React.FC<Props> = (props) => {
   const { language } = useSelector((s: RPropsRedux) => s.Redux);
 
   const inTransition = language !== "en" && language !== "pt";
-  const currentlyEnglish = language === "en" || language === "en>pt";
+  const currentlyEnglish = () => {
+    if (animate) {
+      return language === "en" || language === "en>pt";
+    }
+    return language === "en" || language === "pt>en";
+  };
 
   const className = `${
     styles.localized
@@ -41,7 +46,7 @@ const LocaleText: React.FC<Props> = (props) => {
 
   return (
     <span className={className}>
-      {currentlyEnglish ? en : pt}
+      {currentlyEnglish() ? en : pt}
     </span>
   );
 };
