@@ -11,17 +11,17 @@ export default function(
   switch (action.type) {
     /* §0 MISC */
 
-    case types.SET_ORIENTATION: return {
+    case types.SET_ORIENTATION: return { // §1
       ...state,
       orientation: action.value as "landscape" | "portrait",
     };
 
-    case types.SET_SCROLLBAR: return {
+    case types.SET_SCROLLBAR: return { // §1
       ...state,
       scrollbar: (action.value as number) >= 0 ? (action.value as number) : 12,
     };
 
-    case types.LNG_CHANGE: {
+    case types.LNG_CHANGE: { // §1
       // Should be totally controled by sagas, which always have
       // payload === "fromSaga"
       if (action.payload === undefined) {
@@ -34,13 +34,11 @@ export default function(
       };
     }
 
-    /* §0 STRY Stories */
-
     case types.SDB_TOGGLE: { // §1
       const { sidebar } = state;
-      const wantsVisible = sidebar === "hidden" || sidebar === "hiding";
+      const wantsVisible = sidebar === "hidden";
 
-      if (sidebar === "hidden" && wantsVisible) {
+      if (wantsVisible) {
         return {
           ...state,
           sidebar: "visible",
@@ -56,6 +54,8 @@ export default function(
 
       return state;
     }
+
+    /* §0 STRY Stories */
 
     // §1
     case types.STRY_REPLACE: {

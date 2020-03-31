@@ -3,7 +3,6 @@ import { all, delay, put, select, takeLatest } from "redux-saga/effects";
 import types, { Action } from "actions/types";
 import { RPropsRedux } from "reducers";
 import { State } from "reducers/state";
-import { StateStories } from "reducers/state/stories";
 
 // §1 Transitions
 
@@ -73,17 +72,13 @@ function* watchSDB_TOGGLE() { // §2
   const sidebar: State["sidebar"] = yield select(
     (s: RPropsRedux) => s.Redux.sidebar,
   );
-  const wantsHidden = yield sidebar === "visible";
-
-  if (yield wantsHidden) {
-    if (yield sidebar === "hiding") {
-      yield delay(210);
-      yield put({
-        type: types.SDB_TOGGLE,
-        bool: action.bool,
-        value: "hidden",
-      });
-    }
+  if (yield sidebar === "hiding") {
+    yield delay(300);
+    yield put({
+      type: types.SDB_TOGGLE,
+      bool: action.bool,
+      value: "hidden",
+    });
   }
 }
 
