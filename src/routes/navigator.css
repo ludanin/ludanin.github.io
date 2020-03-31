@@ -1,24 +1,31 @@
 :root {
-  --CONTENTwidth: 100vw;
-  --CONTENTheight: calc(calc(var(--vh, 1vh) * 100) - var(--NAVBARheight));
+  --NAVIGATORwidth: 100vw;
+  --NAVIGATORheight: calc(calc(var(--vh, 1vh) * 100) - var(--NAVBARheight));
+
+  --CONTENTwidth: var(--NAVIGATORwidth);
+  --CONTENTheight: var(--NAVIGATORheight);
+  --CONTENTheaderHeight: calc(var(--CONTENTheight) * 0.15);
+  --CONTENThorizontalPadding: 2.5vw;
 } @media screen and (min-width: 621px) {
   :root {
-    --CONTENTwidth: calc(100vw - var(--NAVBARwidth));
-    --CONTENTheight: 100vh;
+    --NAVIGATORwidth: calc(100vw - var(--NAVBARwidth));
+    --NAVIGATORheight: 100vh;
   }
 }
 
+/* §0 Navigator */
+
 .NAVIGATOR {
-  width: var(--CONTENTwidth);
-  height: var(--CONTENTheight);
+  width: var(--NAVIGATORwidth);
+  height: var(--NAVIGATORheight);
 
   position: absolute;
   top: 0;
   right: 0;
 
   background-color: var(--base00);
-  border-bottom-left-radius: 3vw;
-  border-bottom-right-radius: 3vw;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 
   display: flex;
   flex-direction: column;
@@ -34,4 +41,84 @@
   border-radius: 0;
   width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
+}
+
+/* §0 Content */
+
+/* §1 Main wrapper */
+.NAVIGATOR > .content {
+  width: var(--CONTENTwidth);
+  height: var(--CONTENTheight);
+
+  position: relative;
+  white-space: pre-wrap;
+
+  padding-left:  var(--CONTENThorizontalPadding);
+  padding-right: var(--CONTENThorizontalPadding);
+
+  text-align: justify;
+  text-align-last: center;
+} @media screen and (max-width: 620px) {
+  .NAVIGATOR > .content {
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+} @media screen and (min-width: 769px) {
+  .NAVIGATOR > .content {
+    padding-right: calc(
+      var(--scrollbar) + var(--CONTENThorizontalPadding) + var(--NAVBARwidth)
+    );
+  }
+}
+
+/* §2 Scrollable adjustments */
+.NAVIGATOR > .content.scrollable {
+  width: calc(var(--CONTENTwidth) - var(--scrollbar));
+  margin-left: var(--scrollbar);
+}
+
+/* §3 Scrollable effects */
+.NAVIGATOR > .content::after {
+  width: 100%;
+  height: var(--CONTENTheaderHeight);
+
+  position: sticky;
+  bottom: 0;
+
+  content: " ";
+  display: block;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(var(--base00a), 0),
+    rgba(var(--base00a), 1)
+  );
+} @media screen and (min-width: 621px) {
+  .NAVIGATOR > .content::after {
+    height: calc(var(--CONTENTheaderHeight) * 2);
+  }
+}
+
+/* §1 Content Header */
+.NAVIGATOR > .content .header {
+  width: 100%;
+  height: var(--CONTENTheaderHeight);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-family: var(--display);
+  font-size: 1.3em;
+}
+
+.NAVIGATOR > .content .header::after {
+  width: 72%;
+  margin-top: calc(var(--CONTENTheaderHeight) * 0.2);
+  height: 1px;
+
+  content: " ";
+  background-color: var(--base20);
 }
