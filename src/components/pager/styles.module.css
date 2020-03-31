@@ -37,6 +37,8 @@
   }
 }
 
+/* §0 only landscape */
+
 .onlyLandscape {
   width: var(--NAVIGATORwidth);
   height: calc(var(--PAGERheight) + 4vh);
@@ -47,6 +49,23 @@
 
   pointer-events: visiblePainted;
   z-index: 3;
+}
+
+.onlyLandscape::before {
+  width: 100%;
+  height: calc(var(--CONTENTheaderHeight) * 2);
+
+  position: fixed;
+  bottom: 0;
+
+  content: " ";
+  display: block;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(var(--base00a), 0),
+    rgba(var(--base00a), 1)
+  );
 }
 
 /* §0 Previous/Next buttons */
