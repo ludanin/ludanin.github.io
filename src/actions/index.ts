@@ -32,17 +32,17 @@ export interface Actions {
    */
   LNG_CHANGE: () => ActionArg;
 
-  // §1 NAUT
+  /**
+   * Toggles the sidebar's visibility
+   */
+  SDB_TOGGLE: () => ActionArg;
+
+  // §1 STRY stories
 
   /**
    * Replaces the current route on top of our stack iwth the given `route`
    */
   STRY_REPLACE: (route: Stories) => ActionArg;
-
-  /**
-   * Toggles the sidebar's visibility
-   */
-  STRY_TOGGLE_SIDEBAR: () => ActionArg;
 
   // §1 NOTF
 
@@ -82,8 +82,8 @@ export const LNG_CHANGE: Actions["LNG_CHANGE"] = () => ({
 export const STRY_REPLACE: Actions["STRY_REPLACE"] = (route) => ({
   type: types.STRY_REPLACE, value: route,
 });
-export const STRY_TOGGLE_SIDEBAR: Actions["STRY_TOGGLE_SIDEBAR"] = () => ({
-  type: types.STRY_TOGGLE_SIDEBAR,
+export const SDB_TOGGLE: Actions["SDB_TOGGLE"] = () => ({
+  type: types.SDB_TOGGLE,
 });
 
 /* §1 Notifications (NOTF) */

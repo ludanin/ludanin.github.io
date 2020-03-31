@@ -53,7 +53,7 @@ function* watchSTRY_REPLACE() { // §2
       // Hide the sidebar when changing tabs (stories)
       if (sidebar === "visible") {
         yield put({
-          type: types.STRY_TOGGLE_SIDEBAR,
+          type: types.SDB_TOGGLE,
           bool: false,
         });
       }
@@ -67,19 +67,19 @@ function* watchSTRY_REPLACE() { // §2
   }
 }
 
-function* watchSTRY_TOGGLE_SIDEBAR() { // §2
-  yield takeLatest(types.STRY_TOGGLE_SIDEBAR, STRY_TOGGLE_SIDEBAR);
-} function* STRY_TOGGLE_SIDEBAR(action: Action) {
-  const sidebar: StateStories["sidebar"] = yield select(
-    (s: RPropsRedux) => s.Redux.stories.sidebar,
+function* watchSDB_TOGGLE() { // §2
+  yield takeLatest(types.SDB_TOGGLE, SDB_TOGGLE);
+} function* SDB_TOGGLE(action: Action) {
+  const sidebar: State["sidebar"] = yield select(
+    (s: RPropsRedux) => s.Redux.sidebar,
   );
   const wantsHidden = yield sidebar === "visible";
 
   if (yield wantsHidden) {
-    if (yield sidebar === "closing") {
+    if (yield sidebar === "hiding") {
       yield delay(210);
       yield put({
-        type: types.STRY_TOGGLE_SIDEBAR,
+        type: types.SDB_TOGGLE,
         bool: action.bool,
         value: "hidden",
       });
@@ -92,6 +92,6 @@ export default function* sagas() {
     watchLNG_CHANGE(),
     watchNOTF_DISMISS(),
     watchSTRY_REPLACE(),
-    watchSTRY_TOGGLE_SIDEBAR(),
+    watchSDB_TOGGLE(),
   ]);
 }

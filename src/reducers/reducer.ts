@@ -36,27 +36,21 @@ export default function(
 
     /* §0 STRY Stories */
 
-    case types.STRY_TOGGLE_SIDEBAR: { // §1
-      const { sidebar } = state.stories;
-      const wantsVisible = sidebar === "hidden" || sidebar === "closing";
+    case types.SDB_TOGGLE: { // §1
+      const { sidebar } = state;
+      const wantsVisible = sidebar === "hidden" || sidebar === "hiding";
 
       if (sidebar === "hidden" && wantsVisible) {
         return {
           ...state,
-          stories: {
-            ...state.stories,
-            sidebar: "visible",
-          },
+          sidebar: "visible",
         };
       }
 
       if (wantsVisible === false) {
         return {
           ...state,
-          stories: {
-            ...state.stories,
-            sidebar: action.value === "hidden" ? "hidden" : "closing",
-          },
+          sidebar: action.value === "hidden" ? "hidden" : "hiding",
         };
       }
 

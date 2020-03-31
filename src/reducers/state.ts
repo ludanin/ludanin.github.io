@@ -8,6 +8,7 @@ export interface State {
   notifications: StateNotifications;
   orientation: "portrait" | "landscape";
   scrollbar: number;
+  sidebar: "visible" | "hidden" | "hiding";
 }
 
 export const initialState: State = {
@@ -17,4 +18,5 @@ export const initialState: State = {
   notifications: {...initialNotifications},
   orientation: "portrait",
   scrollbar: 12,
+  sidebar: "hidden",
 };
