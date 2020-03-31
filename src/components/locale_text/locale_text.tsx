@@ -29,10 +29,6 @@ const LocaleText: React.FC<Props> = (props) => {
   const inTransition = language !== "en" && language !== "pt";
   const currentlyEnglish = language === "en" || language === "en>pt";
 
-  // Get/make default props
-  // const className = customClassName
-  //   ? `${animate ? "" : "noAnimations "}localeText ${customClassName}`
-  //   : `${animate ? "" : "noAnimations "}localeText`;
   const className = `${
     styles.localized
   } ${
