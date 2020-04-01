@@ -73,10 +73,6 @@ class SplashRoute extends React.Component<RPropsComplete> {
     // Removing temporary elements from the DOM
     outer!.parentNode!.removeChild(outer);
 
-    document.documentElement.style.setProperty(
-      "--scrollbar", `${scrollbarWidth > 0 ? scrollbarWidth : 12}px`
-    );
-
     this.props.SET_SCROLLBAR(scrollbarWidth ?? 12);
 
     return scrollbarWidth ?? 12;
