@@ -16,10 +16,17 @@ export default function(
       orientation: action.value as "landscape" | "portrait",
     };
 
-    case types.SET_SCROLLBAR: return { // §1
-      ...state,
-      scrollbar: (action.value as number) >= 0 ? (action.value as number) : 12,
-    };
+    case types.SET_SCROLLBAR: { // §1
+      const scrollbarWidth = action.value as number;
+
+      document.documentElement.style.setProperty(
+        "--scrollbar", `${scrollbarWidth ?? 12}px`
+      );
+      return {
+        ...state,
+        scrollbar: (action.value as number) ?? 12,
+      };
+    }
 
     case types.LNG_CHANGE: { // §1
       // Should be totally controled by sagas, which always have
@@ -39,6 +46,16 @@ export default function(
       const wantsVisible = sidebar === "hidden";
 
       if (wantsVisible) {
+        if (window.matchMedia("(min-width: 621px)").matches) {
+          document.documentElement.style.setProperty(
+            "--NAVIGATORwidth",
+            "calc(100vw - var(--NAVBARwidth) - var(--SIDEBARwidth))",
+          );
+          document.documentElement.style.setProperty(
+            "--CONTENThorizontalPadding",
+            "2.5vw",
+          );
+        }
         return {
           ...state,
           sidebar: "visible",
@@ -46,6 +63,18 @@ export default function(
       }
 
       if (wantsVisible === false) {
+        if (sidebar === "visible") {
+          if (window.matchMedia("(min-width: 621px)").matches) {
+            document.documentElement.style.setProperty(
+              "--NAVIGATORwidth",
+              "calc(100vw - var(--NAVBARwidth))",
+            );
+            document.documentElement.style.setProperty(
+              "--CONTENThorizontalPadding",
+              "15vw",
+            );
+          }
+        }
         return {
           ...state,
           sidebar: action.value === "hidden" ? "hidden" : "hiding",
