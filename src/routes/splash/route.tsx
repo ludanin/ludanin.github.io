@@ -22,8 +22,8 @@ class SplashRoute extends React.Component<RPropsComplete> {
       this.props.SET_ORIENTATION("portrait");
     } else {
       this.props.SET_ORIENTATION("landscape");
-      this.getScrollbarWidth();
     }
+    this.getScrollbarWidth();
     setTimeout(
       () => { this.props.STRY_REPLACE("/home"); },
       1000,
