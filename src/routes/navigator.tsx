@@ -8,7 +8,7 @@ import SplashRoute from "routes/splash/route";
 
 import "./navigator.css";
 
-const Navigator: React.FC<RPropsRedux> = () => {
+const Navigator: React.FC = () => {
   const { current, nextStory } = useSelector((s: RPropsRedux) => s.Redux.stories);
 
   const renderRoute = (story: Stories) => {
