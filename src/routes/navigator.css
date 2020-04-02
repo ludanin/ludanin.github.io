@@ -125,7 +125,7 @@
 
   border-left: 2px solid var(--primary20);
   padding-left: 8vw;
-} @media screen and (min-width: 769px) {
+} @media screen and (min-width: 621px) {
   .NAVIGATOR > .content h1 {
     padding-left: 2vw;
   }
