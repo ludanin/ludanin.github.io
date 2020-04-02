@@ -126,7 +126,6 @@
 
 /* §1 wrapped text */
 .wrappedText {
-  width: calc(var(--NAVBARwidth) * 0.9);
   height: 100%;
 
   display: flex;
@@ -137,6 +136,9 @@
   font-size: calc(var(--NAVBARwidth) * 0.35);
   text-align: center;
   white-space: pre-wrap;
+}
+.showBorder .wrappedText {
+  padding-left: 1px;
 }
 
 /* §1 Page count */
