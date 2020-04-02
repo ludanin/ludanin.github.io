@@ -20,6 +20,37 @@ const Navbar: React.FC<RPropsComplete> = ({
   const showBorder = sidebar === "hidden" ? styles.showBorder : "";
   const activeSidebar = sidebar === "visible" ? styles.activeSidebar : "";
 
+  const storyTitle = () => {
+    if (orientation === "portrait") return null;
+    switch (stories.current) {
+      case "/home": return (
+        <LocaleText
+          animate={false}
+          en={"H\nO\nM\nE"}
+          pt={"I\nN\nÍ\nC\nI\nO"}
+        />
+      );
+      case "/bgado": return "b\nG\nA\nD\nO\n";
+      case "/marborges": return "M\nA\nR\nB\nO\nR\nG\nE\nS";
+      case "/project_e": return (
+        <LocaleText
+          animate={false}
+          en={"P\nR\nO\nJ\nE\nC\nT\n\nE"}
+          pt={"P\nR\nO\nJ\nE\nT\nO\n\nE"}
+        />
+      );
+      case "/resume": return (
+        <LocaleText
+          animate={false}
+          en={"R\nE\nS\nU\nM\nE"}
+          pt={"C\nU\nR\nR\nÍ\nC\nU\nL\nO"}
+        />
+      );
+
+      default: return null;
+    }
+  };
+
   return (
     <div className={`NAVBAR ${showBorder}`}>
 
@@ -52,13 +83,7 @@ const Navbar: React.FC<RPropsComplete> = ({
         {
           orientation === "portrait"
             ? (<Pager/>)
-            : (
-              <LocaleText
-                className={styles.wrappedText}
-                en={"R\nE\nS\nU\nM\nE"}
-                pt={"C\nU\nR\nR\nÍ\nC\nU\nL\nO"}
-              />
-            )
+            : <div className={styles.storyTitle}>{storyTitle()}</div>
         }
       </div>
 

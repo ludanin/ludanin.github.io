@@ -124,8 +124,8 @@
   }
 }
 
-/* §1 wrapped text */
-.wrappedText {
+/* §0 storyTitle */
+.storyTitle {
   height: 100%;
 
   display: flex;
@@ -137,7 +137,10 @@
   text-align: center;
   white-space: pre-wrap;
 }
-.showBorder .wrappedText {
+.storyTitle > span {
+  white-space: pre-wrap;
+}
+.showBorder .storyTitle {
   padding-left: 1px;
 }
 
