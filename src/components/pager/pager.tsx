@@ -105,6 +105,23 @@ class Pager extends React.Component<RPropsComplete & Props, State> {
               : undefined
             }
 
+            { // §3 Select '/resume'
+              current !== "/resume"
+                ? (
+                  <button
+                    onClick={this.chooseStory}
+                    data-target={"/resume" as Stories}
+                  >
+                    <LocaleText
+                      animate={false}
+                      en="Resume"
+                      pt="Currículo"
+                    />
+                  </button>
+                )
+              : undefined
+            }
+
             { // §3 Select '/marborges'/
               current !== "/marborges"
               ? (
