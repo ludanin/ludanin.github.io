@@ -19,6 +19,7 @@
   height: var(--NAVBARheight);
 
   background-color: var(--base90a);
+  box-shadow: var(--shadowTop3);
 
   position: fixed;
   bottom: 0;
@@ -34,11 +35,15 @@
     bottom: unset;
 
     background-color: var(--base00);
+    box-shadow: none;
 
     flex-direction: column-reverse;
     padding: 2vh 0;
 
     animation: slideFromLeft ease 322ms;
+  }
+  :global(.NAVBAR).showBorder {
+    border-right: var(--SIDEBARborder);
   }
 }
 
@@ -121,7 +126,7 @@
 
 /* §1 wrapped text */
 .wrappedText {
-  width: 100%;
+  width: calc(var(--NAVBARwidth) * 0.9);
   height: 100%;
 
   display: flex;
@@ -161,6 +166,10 @@
   transition: background-color ease 322ms, color ease 322ms;
 }
 
+.sidebarButton > i::before {
+  transition: transform ease 125ms;
+}
+
 /* §2 Focus/Active/Hover */
 
 @media screen and (max-width: 620px) {
@@ -178,6 +187,15 @@
     color: var(--base00);
     transition: none;
   }
+  .sidebarButton.activeSidebar {
+    background-color: var(--base90);
+  }
+}
+.sidebarButton.activeSidebar {
+  color: var(--primary20);
+}
+.sidebarButton.activeSidebar > i::before {
+  transform: rotate(360deg);
 }
 
 /* §2 Button Icon */
