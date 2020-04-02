@@ -1,6 +1,6 @@
 export type Stories =
   "/" | // Not really a story, more of a splash route
-  "/home" | "/project_e" | "/marborges" |"/bgado"
+  "/home" | "/resume" | "/project_e" | "/marborges" | "/bgado"
 ;
 
 export interface StateStories {
