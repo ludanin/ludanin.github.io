@@ -29,11 +29,11 @@
     bottom: 3vh;
     right: calc(calc(var(--NAVIGATORwidth) - var(--PAGERwidth)) / 1.8);
 
+    display: flex;
     box-shadow: var(--shadowBottom3);
 
     animation: slideFromBottom ease 300ms;
-
-    display: flex;
+    transition: right ease 300ms;
   }
 }
 
@@ -116,6 +116,7 @@
   color: var(--base00);
   font-family: var(--slab);
   font-size: calc(var(--PAGERwidth) * 0.08);
+  user-select: none;
 
   position: relative;
 } @media screen and (min-width: 621px) {
@@ -158,7 +159,6 @@
 /* §0 storyChooser */
 .storyChooser :global {
   width: var(--PAGERwidth);
-  height: calc(var(--PAGERstoryChooserButtonHeight) * 3);
 
   border: 1px solid var(--base50);
   backdrop-filter: blur(7px);
