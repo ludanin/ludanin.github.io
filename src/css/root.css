@@ -16,6 +16,10 @@ html {
 html, *, :before, :after {
   box-sizing: border-box;
 }
+::selection {
+  color: var(--primary00);
+  background-color: var(--primary70);
+}
 
 body, #root {
   overflow: hidden;
