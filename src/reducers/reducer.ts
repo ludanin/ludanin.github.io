@@ -53,7 +53,7 @@ export default function(
           );
           document.documentElement.style.setProperty(
             "--CONTENThorizontalPadding",
-            "2.5vw",
+            "7.5vw",
           );
         }
         return {
@@ -71,7 +71,7 @@ export default function(
             );
             document.documentElement.style.setProperty(
               "--CONTENThorizontalPadding",
-              "15vw",
+              "17.5vw",
             );
           }
         }
