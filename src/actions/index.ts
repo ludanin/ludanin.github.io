@@ -40,6 +40,16 @@ export interface Actions {
   // §1 STRY stories
 
   /**
+   * Turns the page forward in the current story
+   */
+  STRY_NEXT: () => ActionArg;
+
+  /**
+   * Turns the page backward in the current story
+   */
+  STRY_PREV: () => ActionArg;
+
+  /**
    * Replaces the current route on top of our stack iwth the given `route`
    */
   STRY_REPLACE: (route: Stories) => ActionArg;
@@ -76,14 +86,20 @@ export const SET_SCROLLBAR: Actions["SET_SCROLLBAR"] = (scrollbarWidth) => ({
 export const LNG_CHANGE: Actions["LNG_CHANGE"] = () => ({
   type: types.LNG_CHANGE,
 });
+export const SDB_TOGGLE: Actions["SDB_TOGGLE"] = () => ({
+  type: types.SDB_TOGGLE,
+});
 
 /* §1 Stories (STRY) */
 
 export const STRY_REPLACE: Actions["STRY_REPLACE"] = (route) => ({
   type: types.STRY_REPLACE, value: route,
 });
-export const SDB_TOGGLE: Actions["SDB_TOGGLE"] = () => ({
-  type: types.SDB_TOGGLE,
+export const STRY_NEXT: Actions["STRY_NEXT"] = () => ({
+  type: types.STRY_NEXT,
+});
+export const STRY_PREV: Actions["STRY_PREV"] = () => ({
+  type: types.STRY_PREV,
 });
 
 /* §1 Notifications (NOTF) */
