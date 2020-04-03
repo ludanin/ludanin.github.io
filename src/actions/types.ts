@@ -10,7 +10,7 @@ export type actionType =
   // §2 Miscelaneous
   "SET_ORIENTATION" | "SET_SCROLLBAR" | "LNG_CHANGE" | "SDB_TOGGLE" |
   // §2 Stories
-  "STRY_REPLACE" | "STRY_NEXT" | "STRY_PREV" |
+  "STRY_REPLACE" | "STRY_PAGE_TURN" |
   // §2 Notifications
   "NOTF_NEW" | "NOTF_DELETE" | "NOTF_DISMISS"
 ;
@@ -22,8 +22,7 @@ export default {
   get LNG_CHANGE(): "LNG_CHANGE" { return "LNG_CHANGE"; },
 
   get STRY_REPLACE(): "STRY_REPLACE" { return "STRY_REPLACE"; },
-  get STRY_NEXT(): "STRY_NEXT" { return "STRY_NEXT"; },
-  get STRY_PREV(): "STRY_PREV" { return "STRY_PREV"; },
+  get STRY_PAGE_TURN(): "STRY_PAGE_TURN" { return "STRY_PAGE_TURN"; },
 
   get NOTF_NEW(): "NOTF_NEW" { return "NOTF_NEW"; },
   get NOTF_DELETE(): "NOTF_DELETE" { return "NOTF_DELETE"; },

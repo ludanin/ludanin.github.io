@@ -40,14 +40,12 @@ export interface Actions {
   // §1 STRY stories
 
   /**
-   * Turns the page forward in the current story
+   * Turns the page in the current story
+   *
+   * @param forward If `true` then the page is turned forward, backward
+   * if otherwise
    */
-  STRY_NEXT: () => ActionArg;
-
-  /**
-   * Turns the page backward in the current story
-   */
-  STRY_PREV: () => ActionArg;
+  STRY_PAGE_TURN: (forward?: boolean) => ActionArg;
 
   /**
    * Replaces the current route on top of our stack iwth the given `route`
@@ -95,11 +93,8 @@ export const SDB_TOGGLE: Actions["SDB_TOGGLE"] = () => ({
 export const STRY_REPLACE: Actions["STRY_REPLACE"] = (route) => ({
   type: types.STRY_REPLACE, value: route,
 });
-export const STRY_NEXT: Actions["STRY_NEXT"] = () => ({
-  type: types.STRY_NEXT,
-});
-export const STRY_PREV: Actions["STRY_PREV"] = () => ({
-  type: types.STRY_PREV,
+export const STRY_PAGE_TURN: Actions["STRY_PAGE_TURN"] = (forward) => ({
+  type: types.STRY_PAGE_TURN, bool: forward ?? false,
 });
 
 /* §1 Notifications (NOTF) */
