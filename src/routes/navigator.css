@@ -28,6 +28,8 @@
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   transition: width ease 300ms, height ease 300ms;
