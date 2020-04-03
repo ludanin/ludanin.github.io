@@ -66,7 +66,7 @@
 
   transition: width ease 300ms, height ease 300ms, padding ease 300ms;
 
-  animation: fadeToExistence ease 1000ms;
+  animation: slideFromRight ease 300ms;
 } .NAVIGATOR.transition > .content {
   animation: fadeToNothing ease 350ms;
   animation-fill-mode: forwards;
@@ -88,6 +88,19 @@
 .NAVIGATOR > .content.scrollable {
   width: calc(var(--CONTENTwidth) - var(--scrollbar));
   margin-left: var(--scrollbar);
+}
+
+/* §1 Animations */
+.NAVIGATOR.backward > .content {
+  animation-name: slideFromLeft;
+}
+.NAVIGATOR.nextPage > .content {
+  animation: slideToLeft ease 280ms;
+  animation-fill-mode: forwards;
+}
+.NAVIGATOR.previousPage > .content {
+  animation: slideToRight ease 280ms;
+  animation-fill-mode: forwards;
 }
 
 /* §1 Content Header */
