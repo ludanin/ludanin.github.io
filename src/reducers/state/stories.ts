@@ -16,5 +16,5 @@ export const initialStories: StateStories = {
   nextStory: "/",
   changingPages: "",
   page: 1,
-  maxPage: 4,
+  maxPage: 1,
 };
