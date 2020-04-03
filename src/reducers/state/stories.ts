@@ -6,6 +6,7 @@ export type Stories =
 export interface StateStories {
   current: Stories;
   nextStory: Stories;
+  changingPages: boolean;
   page: number;
   maxPage: number;
 }
@@ -13,6 +14,7 @@ export interface StateStories {
 export const initialStories: StateStories = {
   current: "/",
   nextStory: "/",
+  changingPages: false,
   page: 1,
   maxPage: 1,
 };
