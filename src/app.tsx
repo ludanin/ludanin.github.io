@@ -5,6 +5,7 @@ import createSagaMiddleware from "redux-saga";
 
 import Navbar from "components/navbar/navbar";
 import Pager from "components/pager/pager";
+import Sidebar from "components/sidebar/sidebar";
 import reducers from "reducers";
 import Navigator from "routes/navigator";
 import sagas from "sagas";
@@ -25,6 +26,7 @@ const App: React.FC = () => {
     <Provider store={store}>
       <Navigator/>
       <Pager onlyLandscape={true}/>
+      <Sidebar/>
       <Navbar/>
     </Provider>
   );

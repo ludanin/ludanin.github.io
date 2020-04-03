@@ -63,4 +63,5 @@ a:active {
 
 /* §1 Z Indexes */
 .NAVIGATOR { z-index: 1; }
+.SIDEBAR { z-index: 2; }
 .NAVBAR { z-index: 3; }
