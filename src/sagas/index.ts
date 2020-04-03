@@ -46,14 +46,14 @@ function* watchNOTF_DISMISS() { // §2
 function* watchSTRY_REPLACE() { // §2
   yield takeLatest(types.STRY_REPLACE, STRY_REPLACE);
 } function* STRY_REPLACE(action: Action) {
-  const { current, sidebar } = yield select((s: RPropsRedux) => s.Redux.stories);
+  const { current } = yield select((s: RPropsRedux) => s.Redux.stories);
+  const { orientation, sidebar } = yield select((s: RPropsRedux) => s.Redux);
   if (current !== "/") {
     if (action.payload === undefined) {
       // Hide the sidebar when changing tabs (stories)
-      if (sidebar === "visible") {
+      if (sidebar === "visible" && orientation === "portrait") {
         yield put({
           type: types.SDB_TOGGLE,
-          bool: false,
         });
       }
       yield delay(400); // Remember to match the animation-duration for stories changes
@@ -63,6 +63,23 @@ function* watchSTRY_REPLACE() { // §2
         payload: action.value,
       });
     }
+  }
+}
+
+function* watchSTRY_PAGE_TURN() { // §2
+  yield takeLatest(types.STRY_PAGE_TURN, STRY_PAGE_TURN);
+} function* STRY_PAGE_TURN(action: Action) {
+  const stories: State["stories"] = yield select(
+    (s: RPropsRedux) => s.Redux.stories,
+  );
+
+  if (stories.changingPages) {
+    yield delay(300); // Make it a little bit slower than the CSS transition
+    yield put({
+      type: types.STRY_PAGE_TURN,
+      bool: action.bool,
+      payload: "fromSaga",
+    });
   }
 }
 
@@ -87,6 +104,7 @@ export default function* sagas() {
     watchLNG_CHANGE(),
     watchNOTF_DISMISS(),
     watchSTRY_REPLACE(),
+    watchSTRY_PAGE_TURN(),
     watchSDB_TOGGLE(),
   ]);
 }

@@ -26,6 +26,7 @@ class Pager extends React.Component<RPropsComplete & Props, State> {
 
     this.toggleStoryChooser = this.toggleStoryChooser.bind(this);
     this.chooseStory = this.chooseStory.bind(this);
+    this.turnThePage = this.turnThePage.bind(this);
   }
 
   /* §1 toggleStoryChooser */
@@ -59,6 +60,13 @@ class Pager extends React.Component<RPropsComplete & Props, State> {
     }
   }
 
+  /* §1 turnThePage */
+  turnThePage(event: React.SyntheticEvent<HTMLButtonElement>) {
+    this.props.STRY_PAGE_TURN(
+      event.currentTarget.dataset.forward !== undefined,
+    );
+  }
+
   /* §0 Render */
   render() {
     const { storyChooserVisibility } = this.state;
@@ -73,6 +81,7 @@ class Pager extends React.Component<RPropsComplete & Props, State> {
         <button
           className={styles.prevNext}
           disabled={page === 1}
+          onClick={this.turnThePage}
         >
           <i className="mdi mdi-chevron-left"/>
         </button>
@@ -171,6 +180,8 @@ class Pager extends React.Component<RPropsComplete & Props, State> {
         <button
           className={styles.prevNext}
           disabled={page === maxPage}
+          data-forward="true"
+          onClick={this.turnThePage}
         >
           <i className="mdi mdi-chevron-right"/>
         </button>

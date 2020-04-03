@@ -64,7 +64,7 @@ export default function(
 
       if (wantsVisible === false) {
         if (sidebar === "visible") {
-          if (window.matchMedia("(min-width: 621px)").matches) {
+          if (state.orientation === "landscape") {
             document.documentElement.style.setProperty(
               "--NAVIGATORwidth",
               "calc(100vw - var(--NAVBARwidth))",
@@ -125,6 +125,47 @@ export default function(
           ...state.stories,
           current: action.value as Stories,
           nextStory: action.value as Stories,
+        },
+      };
+    }
+
+    case types.STRY_PAGE_TURN: { // §1
+      const { stories } = state;
+
+      // §2 Prevent changing in transitions && impossible page turns
+
+      if (stories.changingPages && action.payload === undefined) {
+        return state;
+      }
+      // When action.bool the page is turning forward
+      if (action.bool) {
+        if (stories.page === stories.maxPage) {
+          return state;
+        }
+      } else {
+        if (stories.page === 1) {
+          return state;
+        }
+      }
+
+      // §2 If not from a saga, turn the transition animation
+      if (action.payload === undefined) {
+        return {
+          ...state,
+          stories: {
+            ...stories,
+            changingPages: action.bool ? "forward" : "backward",
+          },
+        };
+      }
+
+      // §2 If from a saga turn the page
+      return {
+        ...state,
+        stories: {
+          ...stories,
+          changingPages: "",
+          page: action.bool ? stories.page + 1 : stories.page - 1,
         },
       };
     }
