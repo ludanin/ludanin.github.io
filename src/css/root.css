@@ -26,6 +26,27 @@ body, #root {
   margin: 0; padding: 0;
 }
 
+/* §1 Styles Links */
+
+a {
+  padding: 1px 5px;
+  border-radius: 3px;
+
+  color: var(--base00);
+  text-decoration: none;
+  background-color: var(--primary40);
+  transition: background-color ease 300ms, color ease 272ms;
+}
+
+a:hover {
+  background-color: var(--primary50);
+}
+
+a:active {
+  background-color: var(--primary70);
+  transition: none;
+}
+
 /* §1 variables */
 :root {
   --radius: 0.58vw;
