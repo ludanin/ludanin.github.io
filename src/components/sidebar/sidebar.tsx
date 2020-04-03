@@ -115,8 +115,8 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
           </li>
           <li className={styles.lastItem}>
             <LocaleText
-              en="Knows how to draw, and handle most design softwares, plus knowledge about a lot things related to design"
-              pt="Sabe desenhar, e utilizar a maioria dos softwares de design, possuí também amplo conhecimento relacionado a design"
+              en="Knows how to draw, and handle most design softwares, very handy if you need some last minute mock ups or concept arts"
+              pt="Sabe desenhar, e utilizar a maioria dos softwares de design, muito útil para quando você precisa de umas mock-ups ou concept arts"
             />
           </li>
         </ul>
