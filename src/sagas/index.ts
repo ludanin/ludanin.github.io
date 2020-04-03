@@ -72,8 +72,12 @@ function* watchSTRY_PAGE_TURN() { // §2
   const stories: State["stories"] = yield select(
     (s: RPropsRedux) => s.Redux.stories,
   );
+  const { orientation, sidebar } = yield select((s: RPropsRedux) => s.Redux);
 
   if (stories.changingPages) {
+    if (orientation === "portrait" && sidebar === "visible") {
+      yield put({ type: types.SDB_TOGGLE });
+    }
     yield delay(300); // Make it a little bit slower than the CSS transition
     yield put({
       type: types.STRY_PAGE_TURN,
