@@ -206,6 +206,14 @@
 
 /* §1 Skills */
 
+.skills{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(var(--base00a), 0.9);
+  background-blend-mode: color;
+  background-size: 50%;
+}
+
 @media screen and (max-width: 620px) {
   .skills {
     padding-inline-start: 5vw;
@@ -213,6 +221,18 @@
   }
 } @media screen and (min-width: 621px) {
   .skills { padding-inline-start: 0; }
+}
+
+/* §2 Backgrounds */
+
+.skills.frontEnd {
+  background-image: url("https://img.icons8.com/dusk/64/000000/react.png");
+}
+.skills.backEnd {
+  background-image: url("https://img.icons8.com/dusk/64/000000/server.png");
+}
+.skills.misc {
+  background-image: url("https://img.icons8.com/dusk/64/000000/paint-palette.png");
 }
 
 /* §2 Title */

@@ -69,7 +69,7 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
           />
         </h1>
 
-        <ul className={styles.skills}>
+        <ul className={`${styles.skills} ${styles.frontEnd}`}>
           <span>Front-End</span>
           <li>
             <LocaleText
@@ -90,7 +90,7 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
           </li>
         </ul>
 
-        <ul className={styles.skills}>
+        <ul className={`${styles.skills} ${styles.backEnd}`}>
           <span>Back-End</span>
           <li>Golang</li>
           <li>SQL (<LocaleText en="Loves" pt="Ama"/> PostgreSQL)</li>
@@ -98,7 +98,7 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
           <li>NodeJS (Express, Koa, etc.)</li>
         </ul>
 
-        <ul className={`${styles.skills} ${styles.lastItem}`}>
+        <ul className={`${styles.skills} ${styles.lastItem} ${styles.misc}`}>
           <span><LocaleText en="Misc." pt="Outros"/></span>
           <li><LocaleText en="Loves to work with" pt="Ama trabalhar com"/> Linux</li>
           <li>
