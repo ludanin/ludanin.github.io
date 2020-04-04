@@ -174,11 +174,42 @@
   margin: 3vh 0;
 }
 
-/* §1 */
+/* §1 center */
 
 .NAVIGATOR > .content .center {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* §1 Notes */
+
+.NAVIGATOR > .content .notes {
+  width: 90%;
+  margin: 5vh 0;
+  margin-left: 5%;
+  padding: var(--radius);
+
+  background-color: var(--primary05);
+  border-radius: var(--radius);
+
+  color: var(--primary90);
+  font-family: var(--mono);
+  text-align: center;
+  text-align-last: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 621px) {
+  .NAVIGATOR > .content .notes {
+    margin: 3vh 0;
+  }
+}
+
+.NAVIGATOR > .content .header ~ .notes {
+  margin-top: 0;
 }
