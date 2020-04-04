@@ -108,8 +108,8 @@ const HomeStory: React.FC = () => {
       </div>
 
       <LocaleText
-        en="Just click on the arrows close to the story chooser described above!"
-        pt="Apenas clique nas setas perto do seletor de histórias descrito acima!"
+        en="Just click on the arrows close to the story chooser!"
+        pt="Apenas clique nas setas perto do seletor de histórias!"
       />
     </div>
   );
