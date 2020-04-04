@@ -130,7 +130,10 @@
 }
 
 /* §1 section headers */
-.NAVIGATOR > .content h1 {
+
+/* §2 H1 & Common */
+.NAVIGATOR > .content h1,
+.NAVIGATOR > .content h2 {
   max-width: 100%;
 
   color: var(--primary50);
@@ -141,7 +144,16 @@
   border-left: 2px solid var(--primary20);
   padding-left: 8vw;
 } @media screen and (min-width: 621px) {
-  .NAVIGATOR > .content h1 {
+  .NAVIGATOR > .content h1,
+  .NAVIGATOR > .content h2 {
     padding-left: 2vw;
   }
+}
+
+/* §2 h2 */
+.NAVIGATOR > .content h2 {
+  color: var(--primary30);
+  font-size: 1.15em;
+  border-left: none;
+  margin-left: 2px;
 }
