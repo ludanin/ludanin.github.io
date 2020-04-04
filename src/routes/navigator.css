@@ -158,6 +158,12 @@
   margin-left: 2px;
 }
 
+/* §2 Link Adjustments */
+.NAVIGATOR > .content h1 > a {
+  font-family: var(--slab);
+  padding: 2px 9px;
+}
+
 /* §1 Videos */
 
 .NAVIGATOR > .content video {
