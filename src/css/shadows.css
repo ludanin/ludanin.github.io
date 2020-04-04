@@ -8,6 +8,13 @@
 
 :root {
   /* §1 With colors */
+  --shadowAll0: 0 0 8px  -3px #0001;
+  --shadowAll1: 0 0 8px  -3px #0002;
+  --shadowAll2: 0 0 10px -3px #0003;
+  --shadowAll3: 0 0 12px -3px #0004;
+  --shadowAll4: 0 0 14px -4px #0005;
+  --shadowAll5: 0 0 16px -5px #0006;
+
   --shadowTop0: 0 -4px 8px  -3px #0001;
   --shadowTop1: 0 -4px 8px  -3px #0002;
   --shadowTop2: 0 -4px 10px -3px #0003;
@@ -37,6 +44,13 @@
   --shadowLeft5: 4px 0 16px -5px #0006;
 
   /* §1 Without color */
+  --shadowAll0noColor: 0 0 8px  -3px;
+  --shadowAll1noColor: 0 0 8px  -3px;
+  --shadowAll2noColor: 0 0 10px -3px;
+  --shadowAll3noColor: 0 0 12px -3px;
+  --shadowAll4noColor: 0 0 14px -4px;
+  --shadowAll5noColor: 0 0 16px -5px;
+
   --shadowTop0noColor: 0 -4px 8px  -3px;
   --shadowTop1noColor: 0 -4px 8px  -3px;
   --shadowTop2noColor: 0 -4px 10px -3px;
@@ -64,86 +78,4 @@
   --shadowLeft3noColor: -4px 0 12px -3px;
   --shadowLeft4noColor: -4px 0 14px -4px;
   --shadowLeft5noColor: -4px 0 16px -5px;
-}
-
-/* §0 As a class */
-
-/* §1 shadowTop */
-.shadowTop0 {
-  box-shadow: var(--shadowTop0);
-}
-.shadowTop1 {
-  box-shadow: var(--shadowTop1);
-}
-.shadowTop2 {
-  box-shadow: var(--shadowTop2);
-}
-.shadowTop3 {
-  box-shadow: var(--shadowTop3);
-}
-.shadowTop4 {
-  box-shadow: var(--shadowTop4);
-}
-.shadowTop5 {
-  box-shadow: var(--shadowTop5);
-}
-
-/* §1 shadowRight */
-.shadowRight0 {
-  box-shadow: var(--shadowRight0);
-}
-.shadowRight1 {
-  box-shadow: var(--shadowRight1);
-}
-.shadowRight2 {
-  box-shadow: var(--shadowRight2);
-}
-.shadowRight3 {
-  box-shadow: var(--shadowRight3);
-}
-.shadowRight4 {
-  box-shadow: var(--shadowRight4);
-}
-.shadowRight5 {
-  box-shadow: var(--shadowRight5);
-}
-
-/* §1 shadowBottom */
-.shadowBottom0 {
-  box-shadow: var(--shadowBottom0);
-}
-.shadowBottom1 {
-  box-shadow: var(--shadowBottom1);
-}
-.shadowBottom2 {
-  box-shadow: var(--shadowBottom2);
-}
-.shadowBottom3 {
-  box-shadow: var(--shadowBottom3);
-}
-.shadowBottom4 {
-  box-shadow: var(--shadowBottom4);
-}
-.shadowBottom5 {
-  box-shadow: var(--shadowBottom5);
-}
-
-/* §1 shadowLeft */
-.shadowLeft0 {
-  box-shadow: var(--shadowLeft0);
-}
-.shadowLeft1 {
-  box-shadow: var(--shadowLeft1);
-}
-.shadowLeft2 {
-  box-shadow: var(--shadowLeft2);
-}
-.shadowLeft3 {
-  box-shadow: var(--shadowLeft3);
-}
-.shadowLeft4 {
-  box-shadow: var(--shadowLeft4);
-}
-.shadowLeft5 {
-  box-shadow: var(--shadowLeft5);
 }
