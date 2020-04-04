@@ -52,6 +52,24 @@ const HomeStory: React.FC = () => {
           pt="Como usar este site"
         />
       </h1>
+
+      {/* §2 Change current content */}
+      <h2>
+        <LocaleText
+          en="How to change the current content"
+          pt="Como mudar o conteúdo atual"
+        />
+      </h2>
+
+      <div className="center">
+        <video
+          src="./videos/story_chooser.mp4"
+          muted={true}
+          autoPlay={true}
+          loop={true}
+        />
+      </div>
+
       <LocaleText
         en={[
           `You can change the current story/page by clicking on the book icon (`,
@@ -70,6 +88,28 @@ const HomeStory: React.FC = () => {
           mais sobre meus últimos trabalhos, sinta-se livre para ler todas
           as outras histórias disponíveis aqui.`
         ]}
+      />
+
+      {/* §2 Switch pages */}
+      <h2>
+        <LocaleText
+          en="How to switch pages of a story"
+          pt="Como mudar as páginas de uma história"
+        />
+      </h2>
+
+      <div className="center">
+        <video
+          src="./videos/turn_pages.mp4"
+          autoPlay={true}
+          muted={true}
+          loop={true}
+        />
+      </div>
+
+      <LocaleText
+        en="Just click on the arrows close to the story chooser described above!"
+        pt="Apenas clique nas setas perto do seletor de histórias descrito acima!"
       />
     </div>
   );
