@@ -80,9 +80,9 @@ const HomeStory: React.FC = () => {
           free to read all the stories available here.`
         ]}
         pt={[
-          `Você pode mudar a página/história atual ao clickar no ícone do livro (`,
+          `Você pode mudar a página/história atual ao clicar no ícone do livro (`,
           <i className="mdi mdi-book-open-page-variant" key="HOME/pt:1"/>,
-          `) abaixo. Se estiver interessado em obter um breve resumo de minha carreira
+          `) abaixo. Se estiver interessado em obter um breve resumo da minha carreira
           profissional eu sugiro que você selecione a história "Currículo",
           contudo, se estiver com um pouco de tempo livre, e deseja conhecer
           mais sobre meus últimos trabalhos, sinta-se livre para ler todas
