@@ -109,6 +109,12 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
           </li>
           <li>
             <LocaleText
+              en="Experience with systems like Arduino and developing applications targetting low-resources CPUs, e.g. Raspberry Pi"
+              pt="Experiência com sistemas como o Arduino e em desenvolvimento de aplicações que almejam CPUs com poucos recursos, ex.: Raspberry Pi"
+            />
+          </li>
+          <li>
+            <LocaleText
               en="Would love to have the opportunity to work in something related to arts or with topics associated to social work"
               pt="Iria amar ter a oportunidade de trabalhar com algo mais artístico ou com tópicos relacionados à trablhos sociais"
             />
