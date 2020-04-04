@@ -157,3 +157,22 @@
   border-left: none;
   margin-left: 2px;
 }
+
+/* §1 Videos */
+
+.NAVIGATOR > .content video {
+  max-width: calc(var(--CONTENTwidth) * 0.8);
+  border: 3px solid var(--base90);
+  border-radius: var(--radius);
+  display: block;
+  margin: 3vh 0;
+}
+
+/* §1 */
+
+.NAVIGATOR > .content .center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
