@@ -109,20 +109,40 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
           </li>
           <li>
             <LocaleText
-              en="Experience with systems like Arduino and developing applications targetting low-resources CPUs, e.g. Raspberry Pi"
-              pt="Experiência com sistemas como o Arduino e em desenvolvimento de aplicações que almejam CPUs com poucos recursos, ex.: Raspberry Pi"
+              en={`
+                Experience with systems like Arduino and developing
+                applications targetting low-resources CPUs, e.g. Raspberry Pi
+              `}
+              pt={`
+                Experiência com sistemas como o Arduino e em desenvolvimento
+                de aplicações que almejam CPUs com poucos recursos, ex.:
+                Raspberry Pi
+              `}
             />
           </li>
           <li>
             <LocaleText
-              en="Would love to have the opportunity to work in something related to arts or with topics associated to social work"
-              pt="Iria amar ter a oportunidade de trabalhar com algo mais artístico ou com tópicos relacionados à trablhos sociais"
+              en={`
+                Would love to have the opportunity to work in something
+                related to arts or with topics associated to social work
+              `}
+              pt={`
+                Iria amar ter a oportunidade de trabalhar com algo mais
+                artístico ou com tópicos relacionados à trablhos sociais
+              `}
             />
           </li>
           <li className={styles.lastItem}>
             <LocaleText
-              en="Knows how to draw, and handle most design softwares, very handy if you need some last minute mock ups or concept arts"
-              pt="Sabe desenhar, e utilizar a maioria dos softwares de design, muito útil para quando você precisa de umas mock-ups ou concept arts"
+              en={`
+                Knows how to draw, and handle most design softwares, very
+                handy if you need some last minute mock ups or concept arts
+              `}
+              pt={`
+                Sabe desenhar, e utilizar a maioria dos softwares de design,
+                muito útil para quando você precisa de umas mock-ups ou
+                concept arts
+              `}
             />
           </li>
         </ul>
@@ -137,8 +157,8 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
         <div className={styles.credits}>
           <LocaleText
             en={[
-              "This website was developed using ReactJS (with Redux & Redux-Sagas) ",
-              "you can check its source code ",
+              "This website was developed using ReactJS (with Redux & ",
+              "Redux-Sagas) you can check its source code ",
               (
                 <a
                   href="https://github.com/ludanin/ludanin.github.io"
@@ -151,8 +171,8 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
 
               <br key="SIDEBAR/en:br1"/>, <br key="SIDEBAR/en:br2"/>,
 
-              "Some of the icons rendered on the content published here were ",
-              "acquired from the ",
+              "Some of the icons rendered on the content published here ",
+              "were acquired from the ",
               (
                 <a href="https://icons8.com" key="SIDEBAR/en:icons8">Icons8</a>
               ),
