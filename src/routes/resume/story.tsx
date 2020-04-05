@@ -45,6 +45,26 @@ const ResumeStory: React.FC<RPropsComplete> = ({
             selecionado
           `}
         />
+        <LocaleText
+          en={(
+            <span>
+              {Redux.orientation === "landscape" ? "Click " : "Touch "}
+              <a href="https://ludanin.github.io/docs/assets/cv.pdf">
+                here
+              </a>
+              {" "}for the .PDF version of this page.
+            </span>
+          )}
+          pt={(
+            <span>
+              {Redux.orientation === "landscape" ? "Clique " : "Toque "}
+              <a href="https://ludanin.github.io/docs/assets/cv.pdf">
+                aqui
+              </a>
+              {" "}para a versão .PDF desta página.
+            </span>
+          )}
+        />
       </div>
 
       {/* §1 Project E */}
