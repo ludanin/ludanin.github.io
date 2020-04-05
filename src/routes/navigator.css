@@ -249,4 +249,11 @@
     padding-left: calc(var(--CONTENTwidth) * 0.02);
     list-style-type: lower-roman;
   }
+  .NAVIGATOR > .content ul > li.bullet {
+    list-style-type: circle;
+  }
+}
+
+.NAVIGATOR > .content ul > li.bullet {
+  border-color: var(--primary10);
 }
