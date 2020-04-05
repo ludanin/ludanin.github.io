@@ -42,11 +42,11 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="496.15994"
-     inkscape:cy="924.4414"
+     inkscape:cx="390.15994"
+     inkscape:cy="963.4414"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -66,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -856,7 +856,9 @@
                    y="157.9744"
                    style="line-height:0.57999998;text-align:justify;text-anchor:start" /></flowRegion><flowPara
                  id="flowPara1074"
-                 style="font-size:16px;line-height:0.57999998;text-align:justify;text-anchor:start">Due to a NDA further details of the Start-up cannot be discussed. You can, however, check some screens &amp; videos of the project at https://ludanin.github.io/project_e The content available there is the final stage of our MVP.</flowPara></flowRoot>            <circle
+                 style="font-size:16px;line-height:0.57999998;text-align:justify;text-anchor:start">Due to a NDA further details of the Start-up cannot be discussed. You can, however, check some screens &amp; videos of the project at <flowSpan
+   style="fill:#7e57c2"
+   id="flowSpan1013">ludanin.github.io/#project_e</flowSpan> The content available there is the final stage of our MVP.</flowPara></flowRoot>            <circle
                r="0.93544334"
                cy="239.43004"
                cx="79.653145"
@@ -918,7 +920,7 @@
            id="flowPara909-4"
            style="font-size:16px;line-height:0.60000002;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">Check the in depth and interactive version of this CV at: </flowPara><flowPara
            id="flowPara1813"
-           style="font-size:16px;line-height:0.60000002;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">ludanin.github.io/resume</flowPara></flowRoot>    </g>
+           style="font-size:16px;line-height:0.60000002;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">ludanin.github.io/#resume</flowPara></flowRoot>    </g>
     <rect
        style="opacity:1;vector-effect:none;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.07491025;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.79784595, 1.79784595;stroke-dashoffset:0;stroke-opacity:1"
        id="rect879-3"
