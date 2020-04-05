@@ -28,11 +28,14 @@ class SplashRoute extends React.Component<RPropsComplete> {
 
     setTimeout(
       () => {
+        const { href } = window.location;
         if (this.props.Redux.orientation === "landscape"){
           this.props.SDB_TOGGLE();
         }
-        if (window.location.href.includes("/resume")) {
+        if (href.includes("resume")) {
           this.props.STRY_REPLACE("/resume");
+        } else if (href.includes("project_e")) {
+          this.props.STRY_REPLACE("/project_e");
         } else {
           this.props.STRY_REPLACE("/home");
         }
