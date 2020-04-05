@@ -244,12 +244,16 @@
 
   border-left: 1px solid var(--primary20);
   list-style: none;
+
+  text-align: left;
 } @media screen and (min-width: 621px) {
   .NAVIGATOR > .content ul > li {
     margin-left: 0;
     padding: 3vh 0;
     padding-left: calc(var(--CONTENTwidth) * 0.02);
     list-style-type: lower-roman;
+
+    text-align: justify;
   }
   .NAVIGATOR > .content ul > li.bullet {
     list-style-type: circle;
