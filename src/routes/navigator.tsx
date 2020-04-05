@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { RPropsRedux } from "reducers";
 import { Stories } from "reducers/state/stories";
 import HomeStory from "routes/home/story";
+import ResumeStory from "routes/resume/story";
 import SplashRoute from "routes/splash/route";
 
 import "./navigator.css";
@@ -11,9 +12,10 @@ import "./navigator.css";
 const Navigator: React.FC = () => {
   const { current, nextStory, changingPages } = useSelector((s: RPropsRedux) => s.Redux.stories);
 
-  const renderRoute = (story: Stories) => {
-    switch (story) {
+  const renderRoute = (s: Stories) => {
+    switch (s) {
       case "/home": return <HomeStory/>;
+      case "/resume": return <ResumeStory/>;
 
       case "/":
       default: return <SplashRoute/>;
