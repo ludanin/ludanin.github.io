@@ -64,9 +64,10 @@ const HomeStory: React.FC = () => {
       <div className="center">
         <video
           src="./videos/story_chooser.mp4"
-          muted={true}
           autoPlay={true}
+          controls={true}
           loop={true}
+          muted={true}
         />
       </div>
 
@@ -102,8 +103,10 @@ const HomeStory: React.FC = () => {
         <video
           src="./videos/turn_pages.mp4"
           autoPlay={true}
-          muted={true}
+          controls={true}
           loop={true}
+          muted={true}
+          style={{ paddingRight: 2 }}
         />
       </div>
 
