@@ -141,6 +141,7 @@
   font-weight: normal;
   font-size: 1.3em;
 
+  position: relative;
   border-left: 2px solid var(--primary20);
   padding-left: 8vw;
 } @media screen and (min-width: 621px) {
@@ -162,6 +163,14 @@
 .NAVIGATOR > .content h1 > a {
   font-family: var(--slab);
   padding: 2px 9px;
+}
+
+/* §2 Subtitles */
+.NAVIGATOR > .content h1 > .subtitle {
+  font-family: var(--mono);
+
+  position: absolute;
+  right: 0;
 }
 
 /* §1 Videos */
@@ -219,4 +228,25 @@
 
 .NAVIGATOR > .content .header ~ .notes {
   margin-top: 0;
+}
+
+/* §1 Lists */
+
+.NAVIGATOR > .content ul {
+  padding-left: 0;
+}
+
+.NAVIGATOR > .content ul > li {
+  padding: 5vh 0;
+  padding-left: calc(var(--CONTENTwidth) * 0.08);
+
+  border-left: 1px solid var(--primary20);
+  list-style: none;
+} @media screen and (min-width: 621px) {
+  .NAVIGATOR > .content ul > li {
+    margin-left: 0;
+    padding: 3vh 0;
+    padding-left: calc(var(--CONTENTwidth) * 0.02);
+    list-style-type: lower-roman;
+  }
 }
