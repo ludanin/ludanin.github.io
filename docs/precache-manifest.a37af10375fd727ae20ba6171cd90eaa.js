@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7a78b3ab4101ea51250ecbb921e7ba0",
+    "revision": "e522eb7e799f15532f57fa1c36762cc8",
     "url": "https://ludanin.github.io/docs/index.html"
   },
   {
-    "revision": "c8e46f34260957b3f7e8",
-    "url": "https://ludanin.github.io/docs/static/css/main.9a1c3938.chunk.css"
+    "revision": "4d40eb4849f78d7ea35c",
+    "url": "https://ludanin.github.io/docs/static/css/main.69a329c2.chunk.css"
   },
   {
     "revision": "54c03d45b3a5aa18378c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://ludanin.github.io/docs/static/js/2.359fab0d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8e46f34260957b3f7e8",
-    "url": "https://ludanin.github.io/docs/static/js/main.6555a9e3.chunk.js"
+    "revision": "4d40eb4849f78d7ea35c",
+    "url": "https://ludanin.github.io/docs/static/js/main.f53ea098.chunk.js"
   },
   {
     "revision": "83119a14822931cf35de",
