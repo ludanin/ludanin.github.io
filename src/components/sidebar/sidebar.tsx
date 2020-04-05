@@ -193,7 +193,7 @@ const Sidebar: React.FC<RPropsRedux> = ({ Redux }) => {
 
               <br key="SIDEBAR/pt:br1"/>, <br key="SIDEBAR/en:br2"/>,
 
-              "Alguns dos ícones utilizados no conteúdo publicado aqui foram ",
+              "Alguns dos ícones utilizados nos conteúdos publicados aqui foram ",
               "adquiridos da biblioteca ",
               (
                 <a href="https://icons8.com" key="SIDEBAR/pt:icons8">Icons8</a>
