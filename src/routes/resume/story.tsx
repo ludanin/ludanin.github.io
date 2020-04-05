@@ -227,16 +227,15 @@ const ResumeStory: React.FC<RPropsComplete> = ({
         <LocaleText
           en="
             I did a series of works for Marborges (as a freelancer) that
-            prioritized to digitilize traditional workflows, these works
-            also allowed them to acquire reports and automate routines (such
-            as generating spreadsheets, etc.) in a faster way.
+            digitilized traditional workflows, these works also allowed
+            them to acquire reports and automate routines (such as generating
+            spreadsheets, etc.) in a faster way.
           "
           pt="
             Realizei uma série de trabalhos para a Marborges (como freelancer)
-            que priorizaram digitalizar métodos de trabalhos tradicionais,
-            e que também permitiram os mesmos a adquirirem relatórios e
-            automatizar rotinas (como gerar planilhas, etc.) de um modo
-            bem mais rápido.
+            que digitalizaram métodos de trabalhos tradicionais, e que também
+            permitiram os mesmos a adquirirem relatórios e automatizar rotinas
+            (como gerar planilhas, etc.) de um modo bem mais rápido.
           "
         />
       </div>
