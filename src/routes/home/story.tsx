@@ -1,8 +1,15 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
+import { STRY_REPLACE } from "actions";
 import LocaleText from "components/locale_text/locale_text";
 
 const HomeStory: React.FC = () => {
+  const dispatch = useDispatch();
+  const goToResume = () => {
+    dispatch(STRY_REPLACE("/resume"));
+  };
+
   return (
     <div className="content scrollable">
       {/* §1 Header */}
@@ -76,16 +83,36 @@ const HomeStory: React.FC = () => {
           `You can change the current story/page by clicking on the book icon (`,
           <i className="mdi mdi-book-open-page-variant" key="HOME/en:1"/>,
           `) below. If you want to get a brief overview of my career I'd suggest
-          you to select the story "Resume", however, if you have some
+          you to select the story `,
+          (
+            <a
+              href="#resume"
+              key="HOME/en:resume"
+              onClick={goToResume}
+            >
+              Resume
+            </a>
+          ),
+          `, however, if you have some
           time to spare, and want to know more about my recent works, feel
           free to read all the stories available here.`
         ]}
         pt={[
-          `Você pode mudar a página/história atual ao clicar no ícone do livro (`,
+          `Você pode mudar a página/história atual ao clicar no ícone do
+          livro (`,
           <i className="mdi mdi-book-open-page-variant" key="HOME/pt:1"/>,
-          `) abaixo. Se estiver interessado em obter um breve resumo da minha carreira
-          profissional eu sugiro que você selecione a história "Currículo",
-          contudo, se estiver com um pouco de tempo livre, e deseja conhecer
+          `) abaixo. Se estiver interessado em obter um breve resumo da
+          minha carreira profissional eu sugiro que você selecione a história `,
+          (
+            <a
+              href="#resume"
+              key="HOME/pt:resume"
+              onClick={goToResume}
+            >
+              Currículo
+            </a>
+          ),
+          `, contudo, se estiver com um pouco de tempo livre, e deseja conhecer
           mais sobre meus últimos trabalhos, sinta-se livre para ler todas
           as outras histórias disponíveis aqui.`
         ]}
