@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://ludanin.github.io/docs/static/css/main.69a329c2.chunk.css",
-    "main.js": "https://ludanin.github.io/docs/static/js/main.f53ea098.chunk.js",
-    "main.js.map": "https://ludanin.github.io/docs/static/js/main.f53ea098.chunk.js.map",
+    "main.css": "https://ludanin.github.io/docs/static/css/main.6ed54405.chunk.css",
+    "main.js": "https://ludanin.github.io/docs/static/js/main.b9652c7d.chunk.js",
+    "main.js.map": "https://ludanin.github.io/docs/static/js/main.b9652c7d.chunk.js.map",
     "runtime-main.js": "https://ludanin.github.io/docs/static/js/runtime-main.3b6c3ced.js",
     "runtime-main.js.map": "https://ludanin.github.io/docs/static/js/runtime-main.3b6c3ced.js.map",
-    "static/js/2.359fab0d.chunk.js": "https://ludanin.github.io/docs/static/js/2.359fab0d.chunk.js",
-    "static/js/2.359fab0d.chunk.js.map": "https://ludanin.github.io/docs/static/js/2.359fab0d.chunk.js.map",
+    "static/js/2.174a77eb.chunk.js": "https://ludanin.github.io/docs/static/js/2.174a77eb.chunk.js",
+    "static/js/2.174a77eb.chunk.js.map": "https://ludanin.github.io/docs/static/js/2.174a77eb.chunk.js.map",
     "index.html": "https://ludanin.github.io/docs/index.html",
-    "precache-manifest.a37af10375fd727ae20ba6171cd90eaa.js": "https://ludanin.github.io/docs/precache-manifest.a37af10375fd727ae20ba6171cd90eaa.js",
+    "precache-manifest.c30923fb199f3a6ff354544ae4f9fa0d.js": "https://ludanin.github.io/docs/precache-manifest.c30923fb199f3a6ff354544ae4f9fa0d.js",
     "service-worker.js": "https://ludanin.github.io/docs/service-worker.js",
-    "static/css/main.69a329c2.chunk.css.map": "https://ludanin.github.io/docs/static/css/main.69a329c2.chunk.css.map",
-    "static/js/2.359fab0d.chunk.js.LICENSE.txt": "https://ludanin.github.io/docs/static/js/2.359fab0d.chunk.js.LICENSE.txt"
+    "static/css/main.6ed54405.chunk.css.map": "https://ludanin.github.io/docs/static/css/main.6ed54405.chunk.css.map",
+    "static/js/2.174a77eb.chunk.js.LICENSE.txt": "https://ludanin.github.io/docs/static/js/2.174a77eb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b6c3ced.js",
-    "static/js/2.359fab0d.chunk.js",
-    "static/css/main.69a329c2.chunk.css",
-    "static/js/main.f53ea098.chunk.js"
+    "static/js/2.174a77eb.chunk.js",
+    "static/css/main.6ed54405.chunk.css",
+    "static/js/main.b9652c7d.chunk.js"
   ]
 }
