@@ -52,6 +52,11 @@ export interface Actions {
    */
   STRY_REPLACE: (route: Stories) => ActionArg;
 
+  /**
+   * Sets the maximum amount of pages the current story can have.
+   */
+  STRY_SET_PAGES: (maxPages: number) => ActionArg;
+
   // §1 NOTF
 
   /**
@@ -95,6 +100,9 @@ export const STRY_REPLACE: Actions["STRY_REPLACE"] = (route) => ({
 });
 export const STRY_PAGE_TURN: Actions["STRY_PAGE_TURN"] = (forward) => ({
   type: types.STRY_PAGE_TURN, bool: forward ?? false,
+});
+export const STRY_SET_PAGES: Actions["STRY_SET_PAGES"] = (maxPages) => ({
+  type: types.STRY_SET_PAGES, value: maxPages,
 });
 
 /* §1 Notifications (NOTF) */

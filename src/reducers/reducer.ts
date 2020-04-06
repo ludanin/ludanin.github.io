@@ -125,6 +125,8 @@ export default function(
           ...state.stories,
           current: action.value as Stories,
           nextStory: action.value as Stories,
+          page: 1,
+          maxPage: 1,
         },
       };
     }
@@ -167,6 +169,16 @@ export default function(
           changingPages: "",
           page: action.bool ? stories.page + 1 : stories.page - 1,
         },
+      };
+    }
+
+    case types.STRY_SET_PAGES: { // §1
+      return {
+        ...state,
+        stories: {
+          ...state.stories,
+          maxPage: action.value as number,
+        }
       };
     }
 
