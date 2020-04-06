@@ -264,3 +264,23 @@
 .NAVIGATOR > .content ul > li.bullet {
   border-color: var(--primary10);
 }
+
+/* §1 Buttons */
+.NAVIGATOR > .content button {
+  min-height: 8vh;
+  padding: 2vh 2vw;
+
+  border: none;
+  background-color: var(--base90);
+
+  color: var(--base00);
+  font-family: var(--mono);
+  font-size: 1.1em;
+
+  transition: background-color ease 322ms;
+}
+
+.NAVIGATOR > .content button:hover {
+  color: var(--base00);
+  background-color: var(--primary50);
+}
