@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { RPropsRedux } from "reducers";
 import { Stories } from "reducers/state/stories";
 import HomeStory from "routes/home/story";
+import ProjectEStory from "routes/project_e/story";
 import ResumeStory from "routes/resume/story";
 import SplashRoute from "routes/splash/route";
 
@@ -16,6 +17,7 @@ const Navigator: React.FC = () => {
     switch (s) {
       case "/home": return <HomeStory/>;
       case "/resume": return <ResumeStory/>;
+      case "/project_e": return <ProjectEStory/>;
 
       case "/":
       default: return <SplashRoute/>;
