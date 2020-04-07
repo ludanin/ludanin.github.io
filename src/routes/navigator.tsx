@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 import { RPropsRedux } from "reducers";
 import { Stories } from "reducers/state/stories";
+import BGadoStory from "routes/bgado/story";
 import HomeStory from "routes/home/story";
 import ProjectEStory from "routes/project_e/story";
 import ResumeStory from "routes/resume/story";
@@ -16,6 +17,7 @@ const Navigator: React.FC = () => {
   const renderRoute = (s: Stories) => {
     switch (s) {
       case "/home": return <HomeStory/>;
+      case "/bgado": return <BGadoStory/>;
       case "/resume": return <ResumeStory/>;
       case "/project_e": return <ProjectEStory/>;
 
