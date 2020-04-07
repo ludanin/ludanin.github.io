@@ -20,7 +20,7 @@
   width: var(--NAVIGATORwidth);
   height: var(--NAVIGATORheight);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 
