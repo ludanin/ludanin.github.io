@@ -36,6 +36,10 @@ class SplashRoute extends React.Component<RPropsComplete> {
           this.props.STRY_REPLACE("/resume");
         } else if (href.includes("project_e")) {
           this.props.STRY_REPLACE("/project_e");
+        } else if (href.includes("bgado")) {
+          this.props.STRY_REPLACE("/bgado");
+        } else if (href.includes("marborges")) {
+          this.props.STRY_REPLACE("/marborges");
         } else {
           this.props.STRY_REPLACE("/home");
         }
